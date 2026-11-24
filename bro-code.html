@@ -1,356 +1,1396 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Bro Code — the complete collection of 170 articles on brotherhood.">
 <title>The Bro Code | The Bro Codex</title>
-
 <style>
 :root {
-    --dark: #481725;
-    --burgundy: #681f32;
-    --cream: #f3efe5;
-    --gold: #b99a62;
-    --text: #302a25;
-    --muted: #746b62;
+  --dark: #481725;
+  --burgundy: #681f32;
+  --cream: #f3efe5;
+  --paper: #fffdf8;
+  --gold: #b99a62;
+  --ink: #302a25;
+  --muted: #746b62;
+  --line: #e4dac9;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-    background: var(--cream);
-    color: var(--text);
-    font-family: Georgia, 'Times New Roman', serif;
-    line-height: 1.7;
+  margin: 0; background: var(--cream); color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif; line-height: 1.72;
 }
-
-/* HEADER */
-
 header {
-    background: var(--dark);
-    color: var(--cream);
-    text-align: center;
-    padding: 65px 20px 55px;
-    border-bottom: 4px solid var(--gold);
+  background: var(--dark); color: var(--cream); text-align: center;
+  padding: 62px 20px 52px; border-bottom: 4px solid var(--gold);
 }
-
-.small {
-    color: var(--gold);
-    letter-spacing: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
+.eyebrow {
+  color: var(--gold); font: 12px Arial, sans-serif;
+  letter-spacing: 5px; text-transform: uppercase;
 }
-
-h1 {
-    font-size: clamp(42px, 8vw, 76px);
-    margin: 15px 0;
-    letter-spacing: 3px;
-}
-
-header p {
-    color: #d5c8bc;
-    font-style: italic;
-}
-
-/* NAVIGATION */
-
+header h1 { font-size: clamp(42px, 8vw, 76px); letter-spacing: 3px; margin: 14px 0 8px; }
+header p { color: #d5c8bc; font-style: italic; margin: 0; }
 nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    padding: 18px;
-    background: #fffdf8;
-    border-bottom: 1px solid #ded4c3;
-    font-family: Arial, sans-serif;
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 25px;
+  padding: 17px 15px; background: #fffdf8; border-bottom: 1px solid var(--line);
+  font: 13px Arial, sans-serif; letter-spacing: 1px;
 }
-
-nav a {
-    color: var(--dark);
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 1px;
+nav a { color: var(--dark); text-decoration: none; }
+nav a:hover { color: var(--gold); }
+main { max-width: 960px; margin: auto; padding: 48px 24px 70px; }
+.intro { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+.intro h2 { color: var(--dark); font-size: 30px; margin: 0 0 12px; }
+.intro p { color: var(--muted); }
+.book-heading {
+  color: var(--dark); font-size: 30px; margin: 60px 0 24px;
+  padding-bottom: 12px; border-bottom: 2px solid var(--gold);
 }
-
-nav a:hover {
-    color: var(--gold);
+.chapter-heading {
+  color: var(--dark); font-size: 24px; margin: 48px 0 20px;
+  padding-bottom: 10px; border-bottom: 1px solid #cdbb98;
 }
-
-/* CONTENT */
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 60px 25px;
+.article-card {
+  background: var(--paper); border: 1px solid var(--line);
+  border-left: 4px solid var(--gold); border-radius: 3px;
+  padding: 22px 25px; margin: 16px 0 22px;
+  box-shadow: 0 3px 12px rgba(50,35,20,.035);
 }
-
-.intro {
-    text-align: center;
-    margin-bottom: 65px;
-}
-
-.intro h2 {
-    color: var(--dark);
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.intro p {
-    color: var(--muted);
-    max-width: 650px;
-    margin: auto;
-}
-
-.chapter {
-    margin-bottom: 55px;
-}
-
-.chapter-title {
-    color: var(--dark);
-    border-bottom: 2px solid var(--gold);
-    padding-bottom: 12px;
-    margin-bottom: 25px;
-    font-size: 26px;
-}
-
-.article {
-    background: #fffdf8;
-    border: 1px solid #e4dac9;
-    border-left: 4px solid var(--gold);
-    padding: 22px 25px;
-    margin: 17px 0;
-    border-radius: 3px;
-    box-shadow: 0 3px 12px rgba(50, 35, 20, 0.04);
-}
-
-.article-number {
-    color: #9b7b43;
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.article h3 {
-    color: var(--dark);
-    margin: 7px 0;
-    font-size: 20px;
-}
-
-.article p {
-    color: var(--muted);
-    font-size: 15px;
-}
-
-.quote {
-    text-align: center;
-    padding: 40px 20px;
-    margin: 60px 0;
-    border-top: 1px solid var(--gold);
-    border-bottom: 1px solid var(--gold);
-    font-size: 24px;
-    font-style: italic;
-    color: var(--dark);
-}
-
-.quote span {
-    display: block;
-    color: #9b7b43;
-    font-size: 13px;
-    margin-top: 15px;
-    font-style: normal;
-}
-
-.back {
-    display: inline-block;
-    color: var(--dark);
-    text-decoration: none;
-    border: 1px solid var(--gold);
-    padding: 12px 24px;
-    transition: 0.2s;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-}
-
-.back:hover {
-    background: var(--dark);
-    color: var(--cream);
-}
-
-/* FOOTER */
-
+.article-heading { color: var(--dark); font-size: 19px; margin: 0 0 12px; }
+.article-card p { color: var(--muted); margin: 10px 0; }
+.article-card p:last-child { margin-bottom: 0; }
+.subtitle { text-align: center; color: var(--gold); margin: -12px 0 25px; }
+.book-heading + .subtitle { margin-top: -15px; }
 footer {
-    background: var(--dark);
-    color: #d5c8bc;
-    text-align: center;
-    padding: 35px 20px;
-    border-top: 4px solid var(--gold);
-    font-family: Arial, sans-serif;
-    font-size: 12px;
+  background: var(--dark); color: #d5c8bc; text-align: center;
+  padding: 32px 20px; border-top: 4px solid var(--gold);
+  font: 12px Arial, sans-serif;
 }
-
-footer a {
-    color: var(--gold);
-    text-decoration: none;
+footer a { color: var(--gold); text-decoration: none; }
+.top-link {
+  display: inline-block; margin: 10px 0 0; color: var(--dark);
+  border: 1px solid var(--gold); padding: 10px 18px;
+  text-decoration: none; font: 12px Arial, sans-serif; letter-spacing: 1px;
 }
-
+.top-link:hover { background: var(--dark); color: var(--cream); }
 @media (max-width: 600px) {
-    nav {
-        gap: 14px;
-    }
-
-    .container {
-        padding: 40px 18px;
-    }
+  nav { gap: 14px; }
+  main { padding: 35px 16px 50px; }
+  .article-card { padding: 18px; }
+  .chapter-heading { font-size: 21px; }
 }
 </style>
 </head>
-
-<body>
-
+<body id="top">
 <header>
-    <div class="small">The Bro Codex · Volume I</div>
-    <h1>THE BRO CODE</h1>
-    <p>The sacred rules of brotherhood.</p>
+  <div class="eyebrow">The Bro Codex · Volume I</div>
+  <h1>THE BRO CODE</h1>
+  <p>The sacred rules of brotherhood.</p>
 </header>
-
 <nav>
-    <a href="index.html">HOME</a>
-    <a href="bro-code.html">THE BRO CODE</a>
-    <a href="bro-kodex.html">THE BRO KODEX</a>
-    <a href="zakonik.html">THE BRO LAW</a>
+  <a href="index.html">HOME</a>
+  <a href="bro-code.html">THE BRO CODE</a>
+  <a href="bro-kodex.html">THE BRO KODEX</a>
+  <a href="zakonik.html">THE BRO LAW</a>
 </nav>
-
-<main class="container">
-
-    <section class="intro">
-        <h2>On Brotherhood</h2>
-        <p>
-            The Bro Code is a collection of principles governing the
-            sacred bond between Bros. It exists to preserve loyalty,
-            respect, trust, and the traditions of brotherhood.
-            These rules are not merely suggestions. They are a way of life.
-        </p>
-    </section>
-
-    <section class="chapter">
-        <h2 class="chapter-title">Chapter I — The Foundation</h2>
-
-        <div class="article">
-            <div class="article-number">Article 001</div>
-            <h3>Bros Before Everything</h3>
-            <p>
-                A Bro shall never abandon another Bro when his presence
-                is genuinely needed. Brotherhood requires loyalty,
-                not convenience.
-            </p>
-        </div>
-
-        <div class="article">
-            <div class="article-number">Article 002</div>
-            <h3>The Sacred Bond</h3>
-            <p>
-                A Bro shall treat the bond between Bros with respect.
-                Trust, once given, shall never be treated as a weakness.
-            </p>
-        </div>
-
-        <div class="article">
-            <div class="article-number">Article 003</div>
-            <h3>Honor Among Bros</h3>
-            <p>
-                A Bro shall not knowingly humiliate, betray, or
-                deliberately undermine another Bro.
-            </p>
-        </div>
-    </section>
-
-    <section class="chapter">
-        <h2 class="chapter-title">Chapter II — Loyalty & Trust</h2>
-
-        <div class="article">
-            <div class="article-number">Article 004</div>
-            <h3>The Bro's Secret</h3>
-            <p>
-                A secret entrusted to a Bro shall remain confidential,
-                unless keeping it would put someone in danger.
-            </p>
-        </div>
-
-        <div class="article">
-            <div class="article-number">Article 005</div>
-            <h3>The Rule of Support</h3>
-            <p>
-                A Bro shall support another Bro through difficult times.
-                Advice may be offered, but judgment shall not be imposed.
-            </p>
-        </div>
-
-        <div class="article">
-            <div class="article-number">Article 006</div>
-            <h3>The Honest Bro</h3>
-            <p>
-                A Bro shall tell another Bro the truth, even when the
-                truth is inconvenient. False reassurance is not loyalty.
-            </p>
-        </div>
-    </section>
-
-    <section class="chapter">
-        <h2 class="chapter-title">Chapter III — The Code of Conduct</h2>
-
-        <div class="article">
-            <div class="article-number">Article 007</div>
-            <h3>The Ex Rule</h3>
-            <p>
-                A Bro shall approach another Bro's former relationship
-                with caution, respect, and honest communication.
-                No friendship is worth deliberate betrayal.
-            </p>
-        </div>
-
-        <div class="article">
-            <div class="article-number">Article 008</div>
-            <h3>The Invitation Principle</h3>
-            <p>
-                When a Bro extends a genuine invitation, another Bro
-                should make a reasonable effort to attend or communicate
-                honestly when unable to do so.
-            </p>
-        </div>
-
-        <div class="article">
-            <div class="article-number">Article 009</div>
-            <h3>The No Bro Left Behind Rule</h3>
-            <p>
-                A Bro shall make sure his fellow Bros are safe and
-                accounted for before leaving a shared event.
-            </p>
-        </div>
-    </section>
-
-    <div class="quote">
-        "A Bro is a friend, a companion, and a brother."
-        <span>— The Principles of Brotherhood</span>
-    </div>
-
-    <div style="text-align:center;">
-        <a class="back" href="index.html">← RETURN TO THE CODEX</a>
-    </div>
-
+<main>
+  <section class="intro">
+    <h2>On Brotherhood</h2>
+    <p>This is the complete English original supplied for The Bro Codex: Articles 1–170. The original wording, article order, headings and divisions have been carried over into this page.</p>
+  </section>
+  <p class="subtitle"><em><em>PART I</em></em></p>
+<p class="subtitle"><em>THE BRO CODE — ENGLISH ORIGINAL • ARTICLES 1–170</em></p>
+<h1 class="book-heading">BOOK I — FUNDAMENTAL LAWS OF BROTHERHOOD</h1>
+<h2 class="chapter-heading">CHAPTER I — THE SUPREMACY OF BROTHERHOOD</h2>
+<section class="article-card">
+<h3 class="article-heading">ARTICLE 1 — BROS BEFORE HOES</h3>
+<p>Lex Prima — The Supreme Law</p>
+<p>A Bro shall always prioritize the Brotherhood over temporary romantic interests.</p>
+<p>No Bro shall abandon, neglect or betray another Bro solely for the purpose of pursuing a romantic interest.</p>
+<p>No romantic relationship shall automatically supersede the obligations established by this Code.</p>
+<p>A Bro shall not permit romantic infatuation to impair his judgment concerning matters of Brotherhood.</p>
+<p>Any violation shall be subject to disciplinary review.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 2 — THE EX-GIRLFRIEND PROHIBITION</h3>
+<p>A Bro shall not engage in romantic or intimate relations with the former romantic partner of another Bro.</p>
+<p>The prohibition shall apply regardless of the duration, seriousness or circumstances of the former relationship.</p>
+<p>A Bro shall not circumvent this Article by claiming that the relationship was unofficial.</p>
+<p>An exception may be granted only with the explicit and freely given consent of the affected Bro.</p>
+<p>Consent shall not be presumed from silence, absence or failure to object.</p>
+<p>The affected Bro shall retain the right to withdraw his consent before the commencement of such relationship.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 3 — THE BRO&#x27;S WORD</h3>
+<p>A Bro&#x27;s promise to another Bro shall be considered binding.</p>
+<p>No Bro shall knowingly make a promise he has no intention of fulfilling.</p>
+<p>A Bro who becomes unable to fulfill an obligation shall notify the affected Bro within a reasonable period.</p>
+<p>Deliberate deception concerning the fulfillment of a promise shall constitute a breach of Brotherhood.</p>
+<p>The severity of the breach shall be determined in accordance with the circumstances.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 4 — THE PROHIBITION OF BRO BETRAYAL</h3>
+<p>No Bro shall knowingly expose another Bro to humiliation, embarrassment or reputational damage for personal entertainment.</p>
+<p>A Bro shall not use confidential information entrusted to him as a means of manipulation.</p>
+<p>No Bro shall deliberately sabotage another Bro&#x27;s legitimate opportunities.</p>
+<p>Any act of betrayal committed in the presence of third parties shall be considered an aggravating circumstance.</p>
+<p>The affected Bro shall be entitled to request a formal hearing before the Brotherhood.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 5 — THE SACRED DUTY OF BRO ASSISTANCE</h3>
+<p>Every Bro shall make reasonable efforts to assist another Bro in a situation of genuine difficulty.</p>
+<p>A Bro shall not abandon another Bro during a mutually agreed social outing without reasonable justification.</p>
+<p>When a Bro requests assistance using the phrase &quot;Bro, I need you&quot;, the request shall receive immediate consideration.</p>
+<p>Assistance may include:</p>
+<p>a. Providing a reasonable excuse;</p>
+<p>b. Facilitating an exit from an uncomfortable situation;</p>
+<p>c. Offering honest advice;</p>
+<p>d. Protecting the dignity of the affected Bro.</p>
+<p>No Bro shall be obligated to participate in unlawful, dangerous or harmful conduct under the pretext of Brotherhood.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 6 — THE LAW OF BRO CONFIDENTIALITY</h3>
+<p>Any personal information disclosed between Bros in confidence shall remain confidential.</p>
+<p>No Bro shall disclose another Bro&#x27;s secrets without permission.</p>
+<p>Information obtained during private conversations shall not be used for public entertainment.</p>
+<p>The obligation of confidentiality shall survive the termination of a friendship.</p>
+<p>Exceptions shall apply where disclosure is reasonably necessary to prevent serious harm.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 7 — THE PROHIBITION OF COCK-BLOCKING</h3>
+<p>No Bro shall deliberately interfere with another Bro&#x27;s mutually welcomed romantic pursuit without legitimate justification.</p>
+<p>Prohibited interference shall include:</p>
+<p>a. Deliberately interrupting a meaningful conversation;</p>
+<p>b. Spreading knowingly false information;</p>
+<p>c. Inventing embarrassing stories;</p>
+<p>d. Intentionally disrupting an agreed meeting.</p>
+<p>A Bro shall be permitted to intervene where another person is uncomfortable, pressured or otherwise being treated improperly.</p>
+<p>Unjustified interference shall constitute an offense against the Brotherhood.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 8 — THE RULE OF MUTUAL RESPECT</h3>
+<p>Every Bro shall treat fellow Bros with dignity and reasonable consideration.</p>
+<p>No Bro shall exploit another Bro&#x27;s weaknesses for personal advantage.</p>
+<p>Disagreements shall not automatically constitute betrayal.</p>
+<p>No Bro shall be required to tolerate repeated disrespect merely because the offender is a fellow Bro.</p>
+<p>Brotherhood shall not constitute immunity from accountability.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 9 — THE RULE OF THE WINGMAN</h3>
+<p>Every Bro accompanying another Bro on a mutually agreed social occasion shall make reasonable efforts to support the latter&#x27;s social confidence.</p>
+<p>A designated Wingman shall not intentionally compete with the Bro he has agreed to assist.</p>
+<p>A Wingman shall not misrepresent the character, intentions or circumstances of his fellow Bro.</p>
+<p>A Wingman shall recognize that his primary responsibility is assistance, not personal advancement.</p>
+<p>No Wingman shall be required to lie, deceive or pressure another person in fulfillment of this Article.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 10 — THE LAW OF THE UNANSWERED MESSAGE</h3>
+<p>A Bro receiving a message from another Bro shall make reasonable efforts to respond.</p>
+<p>Messages containing urgent requests shall receive priority over ordinary conversation.</p>
+<p>A Bro shall not deliberately ignore another Bro solely to create an appearance of superiority.</p>
+<p>The absence of an immediate response shall not, by itself, constitute a violation where reasonable circumstances prevent communication.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 11 — THE PROHIBITION OF PUBLIC HUMILIATION</h3>
+<p>No Bro shall deliberately humiliate another Bro in public for the purpose of gaining social approval.</p>
+<p>Embarrassing photographs, recordings or private messages shall not be distributed without appropriate permission.</p>
+<p>Friendly teasing shall be permitted where all involved parties are comfortable with its nature.</p>
+<p>The repeated continuation of a joke after an objection shall constitute a potential violation.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 12 — THE LAW OF THE LAST BRO</h3>
+<p>No Bro shall knowingly leave another Bro isolated at the conclusion of a mutually agreed social gathering where reasonable assistance can be provided.</p>
+<p>Before departing, a Bro shall make reasonable efforts to establish that his fellow Bros have suitable arrangements for returning home.</p>
+<p>No Bro shall pressure another Bro to remain at an event against his wishes.</p>
+<p>The safety of every individual shall take precedence over the continuation of any social occasion.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 13 — THE DESIGNATION OF THE BRO</h3>
+<p>A Bro shall be recognized as an individual who has established mutual trust, loyalty and friendship with another member of the Brotherhood.</p>
+<p>The designation of Bro shall not be granted solely on the basis of acquaintance, proximity or temporary social interaction.</p>
+<p>No individual shall be entitled to demand the privileges of Brotherhood without accepting its corresponding responsibilities.</p>
+<p>The designation shall remain valid until revoked in accordance with the provisions of this Code.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 14 — THE LAW OF THE BRO HANDSHAKE</h3>
+<p>A mutually established handshake between two Bros shall be regarded as a recognized symbol of Brotherhood.</p>
+<p>No Bro shall deliberately betray the agreed sequence of a handshake.</p>
+<p>A Bro shall not reveal a confidential handshake to an outsider without the consent of its creators.</p>
+<p>In the event of a failed handshake, both Bros shall be entitled to repeat the procedure without penalty.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 15 — THE RULE OF THE THIRD WHEEL</h3>
+<p>A Bro shall make reasonable efforts not to impose himself upon a couple during a private romantic occasion.</p>
+<p>A Bro who knowingly enters such an arrangement shall acknowledge his status as the Third Wheel.</p>
+<p>The couple shall make reasonable efforts to ensure that the Third Wheel is not deliberately excluded or humiliated.</p>
+<p>The Third Wheel shall retain the right to depart at any time.</p>
+<p>No Bro shall be required to serve as a Third Wheel on consecutive occasions without his consent.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 16 — THE LAW OF THE GROUP CHAT</h3>
+<p>Every Bro shall respect the confidentiality of communications within the Brotherhood&#x27;s designated group chat.</p>
+<p>Screenshots of private conversations shall not be distributed outside the group without appropriate permission.</p>
+<p>A Bro shall not intentionally remove another Bro from the group chat for trivial or retaliatory reasons.</p>
+<p>Any removal shall be accompanied by a legitimate explanation.</p>
+<p>The creation of a secondary group chat for the purpose of discussing another Bro shall not automatically constitute a violation, provided that it is not used for harassment or malicious deception.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 17 — THE LAW OF THE SHARED SECRET</h3>
+<p>A secret entrusted to a Bro shall remain the property of the individual who disclosed it.</p>
+<p>The receiving Bro shall not claim ownership over such information.</p>
+<p>A secret shall not become public knowledge merely because multiple Bros are aware of it.</p>
+<p>The obligation shall remain in force even after a disagreement between the parties.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 18 — THE LAW OF PRIOR CLAIM</h3>
+<p>Where two Bros independently express romantic interest in the same individual, neither Bro shall automatically possess exclusive rights to pursue such individual.</p>
+<p>The Bros concerned shall resolve the matter through honest communication.</p>
+<p>No Bro shall deliberately conceal his intentions from another Bro in order to obtain an unfair advantage.</p>
+<p>The wishes and autonomy of the individual concerned shall remain paramount.</p>
+<p>No agreement between Bros shall create ownership or entitlement over another person.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 19 — THE PROHIBITION OF THE DOUBLE CROSS</h3>
+<p>A Bro shall not secretly pursue the romantic interest of another Bro while knowingly pretending to provide assistance.</p>
+<p>Any Bro who develops such an interest shall disclose the conflict honestly.</p>
+<p>Deliberate deception shall constitute an aggravating circumstance.</p>
+<p>The affected Bro shall be entitled to request an explanation.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 20 — THE LAW OF THE FIRST DATE</h3>
+<p>A Bro who accompanies another Bro before a first date shall make reasonable efforts to ensure that the latter arrives prepared and on time.</p>
+<p>No Bro shall deliberately provide false information concerning the date&#x27;s location, time or arrangements.</p>
+<p>A Bro shall not interfere with the date after its commencement unless reasonably requested or necessary.</p>
+<p>Unsolicited advice shall be permitted only to the extent that it does not become persistent interference.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 21 — THE LAW OF THE POST-BREAKUP PERIOD</h3>
+<p>Following the termination of a romantic relationship involving a Bro, fellow Bros shall refrain from exploiting the immediate emotional circumstances for personal advantage.</p>
+<p>No Bro shall deliberately encourage humiliation or retaliation against either former partner.</p>
+<p>A Bro shall not disclose private details of the former relationship without legitimate justification.</p>
+<p>The former partners shall be entitled to maintain independent friendships within the Brotherhood.</p>
+<p>The provisions of Article 2 shall remain applicable.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 22 — THE PROHIBITION OF THE DESPERATION TEXT</h3>
+<p>No Bro shall encourage another Bro to send a message while the latter is visibly acting under unreasonable emotional pressure.</p>
+<p>A Bro may recommend waiting until the following day before sending a message of significant personal importance.</p>
+<p>No Bro shall fabricate messages or impersonate another individual.</p>
+<p>Advice under this Article shall not be used to manipulate or control another Bro&#x27;s personal relationships.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 23 — THE LAW OF THE WINGMAN&#x27;S PRIORITY</h3>
+<p>A Bro designated as Wingman shall not abandon his assigned responsibilities merely because an alternative romantic opportunity presents itself.</p>
+<p>Where the Wingman wishes to withdraw, he shall notify the Bro whom he has agreed to assist.</p>
+<p>A replacement Wingman may be appointed with mutual agreement.</p>
+<p>The Wingman shall not disclose embarrassing information about the Bro he is assisting.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 24 — THE LAW OF THE FORMER WINGMAN</h3>
+<p>No Bro shall intentionally sabotage the romantic prospects of a former Wingman as an act of revenge.</p>
+<p>Previous disagreements shall not automatically invalidate the obligations of basic respect.</p>
+<p>The provisions of this Article shall apply regardless of the current status of the friendship.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 25 — THE PROHIBITION OF FALSE INTEREST</h3>
+<p>No Bro shall encourage another Bro to pursue an individual while knowingly possessing information that makes such pursuit clearly unwelcome.</p>
+<p>A Bro shall not invent signs of romantic interest.</p>
+<p>A Bro shall not misrepresent another person&#x27;s statements or intentions.</p>
+<p>The dignity of all individuals shall be protected under this Article.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 26 — THE LAW OF THE ROMANTIC CONFESSION</h3>
+<p>A Bro who intends to disclose significant romantic feelings concerning a person closely connected to another Bro shall exercise reasonable discretion.</p>
+<p>Where the matter directly concerns an existing relationship within the Brotherhood, the affected Bro should be informed.</p>
+<p>Such disclosure shall not entitle any Bro to dictate the romantic decisions of another individual.</p>
+<p>No Bro shall be punished merely for developing feelings beyond his reasonable control.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 27 — THE RULE OF THE UNITED DEPARTURE</h3>
+<p>Bros attending a social gathering together shall make reasonable efforts to coordinate their departure.</p>
+<p>No Bro shall deliberately leave another Bro without informing him.</p>
+<p>Any Bro wishing to depart independently shall be permitted to do so.</p>
+<p>The safety of all members shall take precedence over the preservation of group arrangements.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 28 — THE LAW OF THE PARTY INVITATION</h3>
+<p>A Bro receiving an invitation to a gathering intended for multiple Bros shall make reasonable efforts to communicate relevant information to the group.</p>
+<p>No Bro shall deliberately exclude a fellow Bro solely to cause humiliation.</p>
+<p>The host shall retain the right to determine the guest list.</p>
+<p>No Bro shall enter a private gathering without the host&#x27;s permission.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 29 — THE PROHIBITION OF SOCIAL SABOTAGE</h3>
+<p>No Bro shall intentionally ruin another Bro&#x27;s social occasion for personal entertainment.</p>
+<p>Such conduct shall include deliberate embarrassment, malicious interruption and the unauthorized disclosure of private information.</p>
+<p>A legitimate warning concerning inappropriate or harmful conduct shall not constitute social sabotage.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 30 — THE LAW OF THE LAST SLICE</h3>
+<p>The final portion of shared food shall not be claimed without reasonable consideration for the other Bros present.</p>
+<p>A Bro wishing to consume the final portion shall first establish that no other Bro has reserved or reasonably expected it.</p>
+<p>Where two Bros simultaneously claim the final portion, the matter shall be resolved by mutual agreement.</p>
+<p>No Bro shall be entitled to claim the final portion merely by virtue of seniority.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 31 — THE RIGHT TO HONEST ADVICE</h3>
+<p>Every Bro shall be entitled to request honest advice from another Bro.</p>
+<p>The responding Bro shall not knowingly provide advice intended to cause harm.</p>
+<p>A Bro shall retain the right to reject advice without being considered disloyal.</p>
+<p>Disagreement shall not constitute an offense.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 32 — THE RIGHT TO PERSONAL SPACE</h3>
+<p>Every Bro shall retain the right to decline social invitations.</p>
+<p>No Bro shall be required to disclose private reasons for declining an invitation.</p>
+<p>Repeated pressure following a clear refusal may constitute a violation of this Code.</p>
+<p>Brotherhood shall not eliminate individual autonomy.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 33 — THE RIGHT TO A FRESH START</h3>
+<p>A Bro who has committed a minor violation shall be entitled to request forgiveness.</p>
+<p>The affected Bro shall retain discretion concerning whether to grant forgiveness.</p>
+<p>A previously resolved offense shall not be repeatedly invoked solely to cause humiliation.</p>
+<p>Serious or repeated violations may be considered during future disciplinary proceedings.</p>
+<p>END OF CURRENT EDITION</p>
+<p>33</p>
+<p>Articles established</p>
+<p>5</p>
+<p>Books opened</p>
+<p>11</p>
+<p>Chapters / sections</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 34 — THE LAW OF THE INVITATION</h3>
+<p>A Bro receiving an invitation to a gathering shall be entitled to accept or decline without unreasonable pressure.</p>
+<p>A Bro who accepts an invitation shall make reasonable efforts to attend at the agreed time.</p>
+<p>A Bro unable to attend shall notify the organizer as soon as reasonably practicable.</p>
+<p>No Bro shall deliberately accept an invitation solely for the purpose of preventing another Bro from attending.</p>
+<p>The host shall retain final authority over the guest list.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 35 — THE LAW OF THE DESIGNATED WINGMAN</h3>
+<p>A Bro appointed as Wingman shall fulfill his responsibilities in good faith.</p>
+<p>A Wingman shall not deliberately undermine the social confidence of the Bro whom he is assisting.</p>
+<p>A Wingman shall provide reasonable assistance when requested.</p>
+<p>A Wingman shall not fabricate romantic interest on behalf of another Bro.</p>
+<p>The appointment shall terminate upon mutual agreement or when the circumstances no longer require such assistance.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 36 — THE LAW OF THE GROUP PHOTOGRAPH</h3>
+<p>No Bro shall publish an unflattering photograph of another Bro without reasonable permission.</p>
+<p>A Bro shall be entitled to request the removal of a photograph that violates his reasonable privacy.</p>
+<p>No Bro shall deliberately select the worst possible photograph of another Bro for the purpose of humiliation.</p>
+<p>Photographs taken during private gatherings shall be treated with appropriate discretion.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 37 — THE LAW OF THE UNEXPECTED ENCOUNTER</h3>
+<p>When two Bros encounter one another unexpectedly in public, mutual acknowledgment shall be encouraged.</p>
+<p>Neither Bro shall be obligated to interrupt an important personal engagement.</p>
+<p>A Bro shall not deliberately pretend not to recognize another Bro solely to avoid embarrassment.</p>
+<p>The customary greeting shall be determined by the established traditions of the individuals concerned.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 38 — THE LAW OF THE MUSICAL AUXILIARY</h3>
+<p>The individual controlling the music at a gathering shall exercise reasonable consideration for the preferences of the other Bros.</p>
+<p>No Bro shall monopolize the music selection for the entire duration of an event without agreement.</p>
+<p>A song selected by a Bro shall not be interrupted solely for the purpose of ridicule.</p>
+<p>The right to select music shall rotate where no alternative arrangement has been established.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 39 — THE PROHIBITION OF UNDECLARED HOSTILITY</h3>
+<p>No Bro shall maintain deliberate hostility toward another Bro while falsely representing the relationship as harmonious.</p>
+<p>A Bro who has a legitimate grievance shall make reasonable efforts to communicate it directly.</p>
+<p>Disagreements shall not automatically constitute grounds for termination of Brotherhood.</p>
+<p>Persistent dishonesty concerning a dispute may constitute an aggravating circumstance.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 40 — THE RIGHT TO A BRO HEARING</h3>
+<p>Any Bro accused of violating this Code shall be entitled to present his account of the relevant circumstances.</p>
+<p>No disciplinary decision shall be made solely on the basis of an unverified accusation.</p>
+<p>The accused Bro shall be permitted to identify relevant witnesses.</p>
+<p>The hearing shall be conducted in a reasonable and impartial manner.</p>
+<p>No Bro shall be required to accept a verdict based solely on popularity or seniority.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 41 — THE LAW OF THE APOLOGY</h3>
+<p>A Bro who has caused legitimate harm to another Bro shall make reasonable efforts to acknowledge the conduct.</p>
+<p>An apology shall be genuine and shall not be used merely to terminate an uncomfortable discussion.</p>
+<p>The acceptance of an apology shall remain at the discretion of the affected Bro.</p>
+<p>Repeated apologies without corresponding changes in conduct shall not automatically satisfy this Article.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 42 — THE PROHIBITION OF RETALIATORY BETRAYAL</h3>
+<p>No Bro shall justify deliberate betrayal solely by claiming that another Bro committed an earlier violation.</p>
+<p>Previous misconduct may be considered during disciplinary proceedings but shall not automatically excuse subsequent misconduct.</p>
+<p>Disputes shall be resolved in accordance with Book IX.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 43 — THE LAW OF THE TEMPORARY SUSPENSION</h3>
+<p>Where a conflict becomes sufficiently serious, the affected Bros may agree to temporarily suspend certain social obligations.</p>
+<p>Such suspension shall not authorize harassment, humiliation or malicious disclosure of private information.</p>
+<p>The suspension may be terminated by mutual agreement.</p>
+<p>Fundamental obligations concerning safety and respect shall remain in force.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 44 — THE GREAT BETRAYAL</h3>
+<p>The deliberate exploitation of a fellow Bro&#x27;s trust for substantial personal advantage shall constitute a serious offense.</p>
+<p>The following conduct may qualify as a Great Betrayal:</p>
+<p>a. Knowingly pursuing a fellow Bro&#x27;s former romantic partner in violation of Article 2;</p>
+<p>b. Deliberately exposing confidential information to cause harm;</p>
+<p>c. Knowingly sabotaging a fellow Bro&#x27;s important opportunity;</p>
+<p>d. Falsely accusing a Bro of misconduct;</p>
+<p>e. Repeatedly violating an express agreement of Brotherhood.</p>
+<p>The severity of the offense shall be determined according to intention, consequences and repetition.</p>
+<p>No offense shall be considered proven without a reasonable examination of the available circumstances.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 45 — THE PROHIBITION OF THE FALSE WINGMAN</h3>
+<p>No Bro shall accept the designation of Wingman while secretly intending to undermine the Bro he is assisting.</p>
+<p>A Bro who deliberately misrepresents his intentions shall be subject to disciplinary review.</p>
+<p>The offense shall be considered aggravated where the deception results in significant personal or social harm.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 46 — THE LAW OF THE BETRAYED SECRET</h3>
+<p>Deliberate disclosure of a confidential matter entrusted in good faith shall constitute an offense against the Brotherhood.</p>
+<p>The unauthorized distribution of private correspondence shall be considered an aggravating circumstance.</p>
+<p>A Bro shall not avoid responsibility by claiming that the information had already been shared with one other person.</p>
+<p>The obligation of confidentiality shall survive the termination of the friendship.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 47 — THE PROHIBITION OF BRO IMPOSTURE</h3>
+<p>No individual shall falsely claim to represent the Brotherhood in order to obtain privileges or advantages.</p>
+<p>No Bro shall impersonate another Bro in private correspondence.</p>
+<p>The unauthorized use of another Bro&#x27;s identity shall constitute a serious violation.</p>
+<p>Consent-based impersonation for harmless entertainment shall not constitute an offense.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 48 — THE LAW OF THE REPEATED OFFENDER</h3>
+<p>A Bro who repeatedly violates the same Article may be subject to increased disciplinary measures.</p>
+<p>Previous violations shall be considered only where they have been reasonably established.</p>
+<p>The severity of any sanction shall remain proportionate to the conduct.</p>
+<p>No Bro shall receive immunity merely because of seniority or popularity within the Brotherhood.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 49 — THE ESTABLISHMENT OF THE BRO COUNCIL</h3>
+<p>The Brotherhood may establish a council responsible for interpreting and administering this Code.</p>
+<p>The Council shall consist of Bros recognized by the members concerned.</p>
+<p>No member shall possess unlimited authority over the Brotherhood.</p>
+<p>Council decisions shall be subject to the principles of fairness, proportionality and transparency.</p>
+<p>Members shall be entitled to challenge a decision where reasonable grounds exist.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 50 — THE JURISDICTION OF THE COUNCIL</h3>
+<p>The Council shall have authority to review alleged violations of this Code.</p>
+<p>The Council may request statements from the Bros concerned.</p>
+<p>The Council shall distinguish between deliberate misconduct, accidental violations and reasonable misunderstandings.</p>
+<p>The Council shall not impose sanctions exceeding those authorized by this Code.</p>
+<p>Every decision shall be accompanied by a brief explanation.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 51 — THE LAW OF THE UNANIMOUS VERDICT</h3>
+<p>A decision requiring unanimous approval shall not be considered adopted unless every eligible Council member agrees.</p>
+<p>Abstentions shall not be interpreted as affirmative votes.</p>
+<p>A Bro directly involved in the dispute shall not participate in determining the verdict concerning his own conduct.</p>
+<p>Where unanimity cannot be achieved, the matter shall be referred to further discussion.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 52 — MINOR VIOLATIONS</h3>
+<p>Minor violations shall include accidental or low-impact breaches of this Code.</p>
+<p>Such violations may result in:</p>
+<p>a. A formal warning;</p>
+<p>b. An apology;</p>
+<p>c. A reasonable compensatory gesture;</p>
+<p>d. Temporary suspension of a ceremonial privilege.</p>
+<p>The sanction shall reflect the circumstances of the violation.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 53 — SERIOUS VIOLATIONS</h3>
+<p>Serious violations shall include deliberate acts of betrayal, repeated dishonesty and substantial breaches of confidentiality.</p>
+<p>The Council may impose:</p>
+<p>a. A formal reprimand;</p>
+<p>b. Temporary suspension from Council privileges;</p>
+<p>c. A requirement to make reasonable amends;</p>
+<p>d. A temporary restriction on participation in Brotherhood ceremonies.</p>
+<p>No sanction shall involve humiliation, coercion or physical punishment.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 54 — THE STATUS OF THE OUTCAST BRO</h3>
+<p>In exceptional circumstances, a Bro may be temporarily excluded from certain Brotherhood activities.</p>
+<p>Such exclusion shall require a properly established serious violation.</p>
+<p>The affected Bro shall receive notice of the reasons and an opportunity to respond.</p>
+<p>The status shall be reviewed after a reasonable period.</p>
+<p>Permanent exclusion shall require exceptional justification and a fair procedure.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 55 — THE RIGHT TO APPEAL</h3>
+<p>Every Bro subject to a disciplinary decision shall be entitled to appeal.</p>
+<p>An appeal shall be submitted within a reasonable period following notification of the decision.</p>
+<p>The appeal shall be reviewed by individuals who were not directly involved in the original decision.</p>
+<p>The reviewing body may uphold, modify or overturn the original decision.</p>
+<p>No Bro shall be punished for exercising his right to appeal in good faith.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 56 — THE LAW OF THE BRO FIST BUMP</h3>
+<p>A fist bump exchanged between Bros shall constitute a recognized gesture of mutual acknowledgment.</p>
+<p>A Bro shall make reasonable efforts to complete a fist bump once initiated.</p>
+<p>Deliberate refusal without reasonable explanation may be considered a minor breach of ceremonial etiquette.</p>
+<p>A failed fist bump shall not constitute grounds for disciplinary proceedings.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 57 — THE LAW OF THE BRO NOD</h3>
+<p>The Bro Nod shall constitute a recognized non-verbal form of acknowledgment.</p>
+<p>It may be used where verbal communication would be unnecessary or socially inconvenient.</p>
+<p>A Bro shall not be required to explain the meaning of a Bro Nod to an outsider.</p>
+<p>The interpretation of an upward or downward nod shall depend on the circumstances and established local tradition.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 58 — THE LAW OF THE LEGENDARY STORY</h3>
+<p>A story involving an extraordinary achievement by a Bro may be retold within the Brotherhood.</p>
+<p>The facts of the story shall not be deliberately altered to cause harm to another individual.</p>
+<p>Embellishment for humorous purposes shall be permitted where the audience reasonably understands the fictional nature of the embellishment.</p>
+<p>No Bro shall claim another Bro&#x27;s achievement as his own.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 59 — THE LAW OF THE BRO ANNIVERSARY</h3>
+<p>The date on which two individuals formally recognize one another as Bros may be celebrated as a ceremonial anniversary.</p>
+<p>Participation shall remain voluntary.</p>
+<p>No Bro shall be required to purchase an expensive gift.</p>
+<p>The significance of the occasion shall derive from the Brotherhood itself rather than material expenditure.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 60 — THE FINAL LAW OF BROTHERHOOD</h3>
+<p>The purpose of this Code shall be to preserve trust, loyalty, mutual respect and the dignity of every Bro.</p>
+<p>No provision shall be interpreted as authorizing harm, harassment, coercion or discrimination.</p>
+<p>The spirit of Brotherhood shall prevail where a literal interpretation would produce an unreasonable result.</p>
+<p>Every Bro shall remain responsible for his own actions, regardless of the provisions of this Code.</p>
+<p>This Article shall constitute the final interpretative principle of the present Book.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 61 — THE RECOGNITION OF BROHOOD</h3>
+<p>Brotherhood shall be established through mutual trust, loyalty and voluntary recognition.</p>
+<p>No individual shall acquire the status of Bro solely through repeated physical proximity to an existing member.</p>
+<p>The granting of Bro status shall be determined by mutual recognition rather than unilateral declaration.</p>
+<p>No Bro shall use his status to demand unquestioning obedience from another member.</p>
+<p>Brotherhood shall be maintained through conduct and not merely through titles.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 62 — THE LAW OF THE ORIGINAL BRO</h3>
+<p>An Original Bro shall be recognized as an individual whose friendship predates the formation of the current Brotherhood.</p>
+<p>Such status may carry ceremonial privileges but shall not grant immunity from this Code.</p>
+<p>No Original Bro shall use seniority to justify betrayal or misconduct.</p>
+<p>All Bros shall remain subject to the same fundamental laws.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 63 — THE PROHIBITION OF BRO POACHING</h3>
+<p>No Bro shall deliberately attempt to destroy an existing friendship between two other Bros for personal advantage.</p>
+<p>The introduction of new friends into the Brotherhood shall not constitute a violation.</p>
+<p>No Bro shall claim exclusive ownership over another Bro&#x27;s friendship.</p>
+<p>Attempts to isolate a Bro from his existing social circle through manipulation shall constitute a serious violation.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 64 — THE LAW OF THE NEW BRO</h3>
+<p>A newly recognized Bro shall be treated with reasonable respect and consideration.</p>
+<p>New Bros shall be informed of the fundamental provisions of this Code.</p>
+<p>Ignorance of this Code may be considered when determining the appropriate response to a minor violation.</p>
+<p>Repeated violations following notification shall not be excused on grounds of unfamiliarity.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 65 — THE LAW OF THE BRO TITLE</h3>
+<p>The designation of Bro shall not be used as a means of manipulation.</p>
+<p>A person shall not be required to accept the designation if uncomfortable with it.</p>
+<p>The use of ceremonial titles such as Chief Bro, Supreme Bro or Legendary Bro shall be permitted for entertainment and organizational purposes.</p>
+<p>No title shall supersede the fundamental rights of another individual.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 66 — THE PROHIBITION OF THE BRO&#x27;S SISTER</h3>
+<p>A Bro shall exercise particular discretion before pursuing a romantic relationship with the sibling of another Bro.</p>
+<p>The affected Bro should be informed before any serious romantic pursuit develops.</p>
+<p>No Bro shall deliberately conceal such a relationship from the affected Bro.</p>
+<p>The sibling concerned shall retain complete autonomy over her romantic decisions.</p>
+<p>This Article shall not establish ownership, veto rights or entitlement over any individual.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 67 — THE LAW OF THE BRO&#x27;S MOTHER</h3>
+<p>No Bro shall deliberately pursue the romantic interest of another Bro&#x27;s parent for the purpose of humiliation or retaliation.</p>
+<p>Any genuine relationship arising independently shall be treated as a private matter between the individuals concerned.</p>
+<p>No Bro shall use familial relationships as a means of provoking another Bro.</p>
+<p>This Article shall not authorize interference in consensual adult relationships.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 68 — THE PROHIBITION OF THE SECRET DOUBLE DATE</h3>
+<p>No Bro shall knowingly arrange a romantic encounter involving another Bro without disclosing material circumstances.</p>
+<p>A Bro shall not misrepresent the identity, intentions or expectations of a participant.</p>
+<p>Any double-date arrangement shall be based upon informed agreement.</p>
+<p>Deliberate deception shall constitute a violation of Article 25.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 69 — THE LAW OF THE BRO&#x27;S CRUSH</h3>
+<p>A Bro who discovers that another Bro has developed romantic feelings for a particular individual shall exercise discretion.</p>
+<p>No Bro shall deliberately pursue the same individual in secret while pretending to provide romantic advice.</p>
+<p>Where competing interests arise, the Bros concerned should communicate honestly.</p>
+<p>The individual concerned shall remain free to make an independent decision.</p>
+<p>No Bro shall be required to conceal genuine feelings indefinitely.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 70 — THE PROHIBITION OF THE REBOUND BETRAYAL</h3>
+<p>A Bro shall not deliberately exploit another Bro&#x27;s recent romantic separation.</p>
+<p>A Bro shall not pursue a former partner of another Bro merely to provoke jealousy or humiliation.</p>
+<p>The prohibition shall apply irrespective of whether the former partners remain in contact.</p>
+<p>Any exception shall require consideration of the circumstances and the explicit consent required under Article 2.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 71 — THE LAW OF THE EXCEPTIONAL EX</h3>
+<p>The Council may recognize exceptional circumstances concerning Article 2.</p>
+<p>Relevant considerations may include:</p>
+<p>a. The duration of the former relationship;</p>
+<p>b. The time elapsed since its conclusion;</p>
+<p>c. The present relationship between the affected Bros;</p>
+<p>d. Whether explicit consent has been given;</p>
+<p>e. Whether the proposed relationship involves deception.</p>
+<p>No exception shall be granted through pressure, intimidation or manipulation.</p>
+<p>The decision shall respect the autonomy of all individuals involved.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 72 — THE LAW OF LEGENDARY PLANNING</h3>
+<p>A Bro organizing a significant event shall make reasonable efforts to inform the relevant members of the Brotherhood.</p>
+<p>No Bro shall deliberately withhold essential information from a member who has been invited.</p>
+<p>The organizer shall retain authority over the reasonable arrangements of the event.</p>
+<p>Participation shall remain voluntary.</p>
+<p>No Bro shall be penalized for declining an event for legitimate personal reasons.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 73 — THE LAW OF THE LEGENDARY ENTRANCE</h3>
+<p>A Bro arriving at a gathering may perform a ceremonial entrance appropriate to the occasion.</p>
+<p>The entrance shall not intentionally disrupt an ongoing serious matter.</p>
+<p>The Brotherhood may recognize particularly memorable entrances as Legendary Events.</p>
+<p>No Bro shall be obligated to recreate a previous entrance.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 74 — THE LAW OF THE LEGENDARY STORY</h3>
+<p>A legendary story shall be considered an event of historical significance within the Brotherhood.</p>
+<p>The original participants shall be recognized where reasonably possible.</p>
+<p>No Bro shall knowingly attribute another Bro&#x27;s achievement to himself.</p>
+<p>Retellings may include humorous exaggerations, provided that they are not presented as verified facts where that distinction matters.</p>
+<p>A legendary story shall not justify the disclosure of confidential information.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 75 — THE LAW OF THE GROUP TRIP</h3>
+<p>Bros undertaking a group trip shall establish reasonable expectations concerning accommodation, transportation and expenses.</p>
+<p>No Bro shall knowingly impose undisclosed financial obligations upon another Bro.</p>
+<p>Shared expenses shall be communicated transparently.</p>
+<p>A Bro shall not abandon the group without reasonable notice where doing so could create a safety issue.</p>
+<p>Every Bro shall retain the right to separate from the group when necessary.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 76 — THE LAW OF THE LAST-MINUTE CANCELLATION</h3>
+<p>A Bro cancelling an agreed event shall notify the other participants as soon as reasonably practicable.</p>
+<p>Repeated cancellations without reasonable explanation may be considered a minor breach of social obligations.</p>
+<p>Genuine emergencies shall constitute sufficient justification.</p>
+<p>No Bro shall be required to attend an event merely to avoid disappointing the group.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 77 — THE PRINCIPLE OF LEGAL INTERPRETATION</h3>
+<p>Every Article shall be interpreted in accordance with its wording, purpose and surrounding provisions.</p>
+<p>No Article shall be interpreted in isolation where another provision directly affects its application.</p>
+<p>In cases of ambiguity, the interpretation most consistent with the fundamental principles of Brotherhood shall prevail.</p>
+<p>No interpretation shall authorize conduct prohibited by the fundamental safeguards of this Code.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 78 — THE HIERARCHY OF LEGAL AUTHORITY</h3>
+<p>The provisions of Book I shall constitute the foundational principles of this Code.</p>
+<p>No subsequent Article shall override Article 1 unless a formal amendment expressly provides otherwise.</p>
+<p>Special provisions shall prevail over general provisions where they address the same matter more specifically.</p>
+<p>Amendments shall not operate retroactively unless expressly agreed and reasonably justified.</p>
+<p>No Bro shall claim exemption merely because an Article is inconvenient.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 79 — THE LAW OF UNFORESEEN CIRCUMSTANCES</h3>
+<p>Where a situation is not expressly regulated by this Code, the Council may determine an appropriate interpretation.</p>
+<p>Such interpretation shall be consistent with the established principles of Brotherhood.</p>
+<p>The absence of an express prohibition shall not automatically establish permission.</p>
+<p>Any newly recognized rule shall be recorded as a supplementary provision.</p>
+<p>No individual shall be penalized for an unforeseeable violation of a rule that had not been established or communicated.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 80 — THE LAW OF THE LOOPHOLE</h3>
+<p>No Bro shall deliberately exploit a technical omission in this Code to justify conduct that clearly violates its fundamental purpose.</p>
+<p>The Council may close a recognized loophole through a formal amendment.</p>
+<p>Such amendment shall specify the conduct regulated and the date on which it enters into force.</p>
+<p>A loophole shall not be considered closed merely because a Council member dislikes the outcome.</p>
+<p>All amendments shall be documented in the official register.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 81 — THE LAW OF THE UNWRITTEN BRO RULE</h3>
+<p>Established traditions of the Brotherhood may be recognized as supplementary customs.</p>
+<p>Such customs shall not contradict any express provision of this Code.</p>
+<p>No unwritten custom shall impose a serious obligation without reasonable notice.</p>
+<p>The Council may formally incorporate a recognized custom into a future edition.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 82 — THE LAW OF THE EMERGENCY EXCEPTION</h3>
+<p>Where an emergency creates circumstances not reasonably anticipated by this Code, ordinary procedural requirements may be temporarily suspended to the extent necessary.</p>
+<p>The protection of human life, safety and dignity shall take precedence over ceremonial or social obligations.</p>
+<p>No Bro shall be punished for reasonably prioritizing an emergency over a social commitment.</p>
+<p>The Council may review the circumstances after the emergency has concluded.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 83 — THE AMENDMENT PROCEDURE</h3>
+<p>Any Bro shall be entitled to propose an amendment.</p>
+<p>Proposed amendments shall be submitted in writing.</p>
+<p>Every amendment shall include:</p>
+<p>a. The Article or Articles affected;</p>
+<p>b. The proposed new wording;</p>
+<p>c. The reasons for the amendment;</p>
+<p>d. The date of submission.</p>
+<p>The Council shall review the proposal.</p>
+<p>An amendment shall enter into force only following the approval procedure established by the Brotherhood.</p>
+<p>Every adopted amendment shall receive a unique identification number.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 84 — THE FINAL CONSTITUTIONAL DECLARATION</h3>
+<p>This Code shall serve as the official written record of the principles, customs and obligations of the Brotherhood.</p>
+<p>Every Bro shall be encouraged to familiarize himself with its provisions.</p>
+<p>No Article shall be used to justify cruelty, coercion, harassment or the violation of another person&#x27;s autonomy.</p>
+<p>The Brotherhood shall be maintained through mutual respect, honesty and voluntary loyalty.</p>
+<p>The Code may be expanded, revised and supplemented as circumstances require.</p>
+<p>OFFICIAL REGISTER</p>
+<p>THE BRO CODE — EDITION I</p>
+<p>84</p>
+<p>Articles</p>
+<p>15</p>
+<p>Books</p>
+<p>20+</p>
+<p>Chapters and sections</p>
+<p>I</p>
+<p>Official edition</p>
+<p>Constitutional framework established</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 85 — THE LAW OF THE UNANSWERED CALL</h3>
+<p>A Bro receiving a telephone call from another Bro shall make reasonable efforts to return the call.</p>
+<p>Repeated calls shall indicate an increased level of urgency, but shall not automatically constitute an emergency.</p>
+<p>A Bro shall not deliberately ignore an urgent request for assistance merely because he is occupied with recreational activities.</p>
+<p>Failure to return a call shall not constitute an offense where reasonable circumstances prevent communication.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 86 — THE LAW OF THE DOUBLE TEXT</h3>
+<p>No Bro shall be ridiculed solely for sending multiple consecutive messages.</p>
+<p>A Bro shall not deliberately withhold a response to manipulate another Bro&#x27;s emotions.</p>
+<p>The number of messages sent shall not determine the importance of the friendship.</p>
+<p>A Bro shall retain the right to communicate without being subjected to unnecessary judgment.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 87 — THE PROHIBITION OF THE SCREENSHOT BETRAYAL</h3>
+<p>No Bro shall distribute screenshots of private conversations without appropriate permission.</p>
+<p>The prohibition shall apply to text messages, direct messages, voice messages and other private communications.</p>
+<p>Screenshots submitted as evidence during a legitimate dispute shall be permitted where reasonably necessary.</p>
+<p>No Bro shall alter a screenshot in a manner designed to misrepresent the original conversation.</p>
+<p>Deliberate manipulation of digital evidence shall constitute a serious violation.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 88 — THE LAW OF THE GROUP CHAT SILENCE</h3>
+<p>A Bro shall not interpret silence in a group chat as automatic rejection or hostility.</p>
+<p>A Bro shall not intentionally flood the group chat with irrelevant messages to prevent another Bro from communicating.</p>
+<p>Important announcements shall not be deliberately buried under unnecessary conversation.</p>
+<p>No Bro shall be removed from a group chat without a reasonable explanation where removal is intended as punishment.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 89 — THE LAW OF THE DIGITAL WINGMAN</h3>
+<p>A Bro assisting another Bro through digital communication shall provide honest and reasonable advice.</p>
+<p>No Bro shall impersonate another Bro when communicating with a third party without explicit consent.</p>
+<p>A Bro shall not send messages from another Bro&#x27;s account without authorization.</p>
+<p>Drafting a message for another Bro shall be permitted.</p>
+<p>The final decision to send such message shall remain with its intended author.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 90 — THE LAW OF THE ONLINE PRESENCE</h3>
+<p>A Bro shall not deliberately misrepresent another Bro&#x27;s online activity to cause embarrassment.</p>
+<p>Online status indicators shall not be treated as conclusive evidence that a Bro is available.</p>
+<p>No Bro shall demand continuous availability from another Bro.</p>
+<p>The right to privacy shall remain protected regardless of digital communication habits.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 91 — THE THREE DEGREES OF BETRAYAL</h3>
+<p>Betrayal shall be classified into three degrees:</p>
+<p>a. First Degree: Minor breach of trust;</p>
+<p>b. Second Degree: Deliberate breach of a substantial obligation;</p>
+<p>c. Third Degree: Severe betrayal involving significant and intentional harm.</p>
+<p>The classification shall consider intention, consequences and repetition.</p>
+<p>No Bro shall automatically be classified as a Third-Degree offender solely because of an accusation.</p>
+<p>The classification shall be determined following a reasonable review.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 92 — THE LAW OF THE SECOND CHANCE</h3>
+<p>A Bro who has committed a violation shall be entitled to request an opportunity to restore trust.</p>
+<p>The granting of a second chance shall remain at the discretion of the affected Bro.</p>
+<p>A second chance shall not eliminate the historical record of the violation.</p>
+<p>Repeated misconduct may constitute grounds for refusing further reconciliation.</p>
+<p>No Bro shall be required to forgive conduct that has caused serious harm.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 93 — THE PROHIBITION OF THE FALSE APOLOGY</h3>
+<p>An apology shall not be considered genuine where it is made solely to avoid accountability.</p>
+<p>Statements intended to shift responsibility entirely onto the affected Bro shall not satisfy this Article.</p>
+<p>A Bro shall not demand immediate forgiveness following an apology.</p>
+<p>Genuine reconciliation shall require appropriate consideration of the consequences of the original conduct.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 94 — THE LAW OF THE RETURNING BRO</h3>
+<p>A former member of the Brotherhood may request reinstatement following a period of separation.</p>
+<p>Reinstatement shall require consideration of the original circumstances.</p>
+<p>The affected members shall be entitled to express objections.</p>
+<p>No Bro shall be required to resume a friendship against his wishes.</p>
+<p>A returning Bro shall remain subject to all applicable provisions of this Code.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 95 — THE PROHIBITION OF PERMANENT GRUDGES</h3>
+<p>A Bro shall not deliberately maintain a minor disagreement solely to exercise social control over another Bro.</p>
+<p>Resolved disputes shall not be repeatedly reopened without legitimate reason.</p>
+<p>This Article shall not prohibit remembering serious misconduct or establishing reasonable boundaries.</p>
+<p>Forgiveness and reconciliation shall remain distinct concepts.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 96 — THE CLASSIFICATION OF BRO INFORMATION</h3>
+<p>Information shared within the Brotherhood shall be assigned one of the following classifications:</p>
+<p>a. Class I — Public Information;</p>
+<p>b. Class II — Brotherhood Information;</p>
+<p>c. Class III — Confidential Information;</p>
+<p>d. Class IV — Highly Confidential Information.</p>
+<p>The classification shall be determined by the person disclosing the information or by the reasonable circumstances of disclosure.</p>
+<p>No classification shall be used to conceal misconduct or prevent someone from seeking necessary help.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 97 — CLASS I: PUBLIC INFORMATION</h3>
+<p>Public Information may be disclosed without special authorization.</p>
+<p>Such information shall include publicly available facts and announcements.</p>
+<p>No Bro shall falsely classify another individual&#x27;s private information as Public Information.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 98 — CLASS II: BROTHERHOOD INFORMATION</h3>
+<p>Brotherhood Information shall be intended primarily for members of the Brotherhood.</p>
+<p>Disclosure outside the Brotherhood shall require reasonable consideration of the circumstances.</p>
+<p>Ordinary social plans and internal arrangements may be classified under this category.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 99 — CLASS III: CONFIDENTIAL INFORMATION</h3>
+<p>Confidential Information shall not be disclosed without the permission of the individual concerned.</p>
+<p>Such information may include private relationship matters, personal difficulties and sensitive conversations.</p>
+<p>Unauthorized disclosure may constitute a serious violation of Article 46.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 100 — CLASS IV: HIGHLY CONFIDENTIAL INFORMATION</h3>
+<p>Highly Confidential Information shall receive the highest level of protection under this Code.</p>
+<p>Disclosure shall require explicit permission, except where necessary to prevent serious harm or obtain appropriate assistance.</p>
+<p>No Bro shall use Highly Confidential Information for entertainment, social advancement or personal revenge.</p>
+<p>The obligation shall survive the termination of Brotherhood.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 101 — THE LAW OF FRIENDLY COMPETITION</h3>
+<p>Competition between Bros shall be permitted and encouraged where conducted in good faith.</p>
+<p>No Bro shall deliberately sabotage another Bro&#x27;s performance.</p>
+<p>The outcome of a competition shall not automatically determine the social standing of its participants.</p>
+<p>A Bro shall acknowledge a legitimate victory by another Bro.</p>
+<p>The rules of any competition shall be established before its commencement.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 102 — THE LAW OF THE REMATCH</h3>
+<p>A Bro who loses a friendly competition may request a rematch.</p>
+<p>The opposing Bro shall retain the right to accept or decline.</p>
+<p>No Bro shall alter the rules after losing in order to invalidate the result.</p>
+<p>A rematch shall be conducted under mutually agreed conditions.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 103 — THE PROHIBITION OF FALSE VICTORY</h3>
+<p>No Bro shall knowingly claim victory in a competition he has lost.</p>
+<p>No Bro shall deliberately falsify the score or results.</p>
+<p>A disputed result shall be reviewed according to the originally established rules.</p>
+<p>The deliberate manipulation of a result shall constitute a violation of Brotherhood integrity.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 104 — THE LAW OF THE LEGENDARY CHALLENGE</h3>
+<p>A challenge may be recognized as Legendary where it demonstrates exceptional creativity, skill or commitment.</p>
+<p>Participation shall remain voluntary.</p>
+<p>No challenge shall require dangerous, unlawful or humiliating conduct.</p>
+<p>The Brotherhood may formally recognize the winner through a ceremonial title.</p>
+<p>No title shall grant authority over other members.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 105 — THE LAW OF THE HUMBLE VICTORY</h3>
+<p>A Bro who wins a competition shall refrain from deliberately humiliating the defeated participant.</p>
+<p>Friendly celebration shall be permitted.</p>
+<p>Repeated boasting intended to cause genuine distress may constitute a minor violation.</p>
+<p>A defeated Bro shall not be required to pretend that the result was different.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 106 — THE LAW OF THE BRO TOAST</h3>
+<p>A ceremonial toast may be conducted to recognize a significant event within the Brotherhood.</p>
+<p>Participation shall remain voluntary.</p>
+<p>No individual shall be required to consume alcohol as part of a ceremonial tradition.</p>
+<p>Non-alcoholic beverages shall be equally valid for the purposes of this Article.</p>
+<p>The toast shall be conducted with reasonable respect for all participants.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 107 — THE LAW OF THE BRO AWARD</h3>
+<p>The Brotherhood may establish honorary awards recognizing exceptional conduct.</p>
+<p>Such awards may include:</p>
+<p>a. Bro of the Year;</p>
+<p>b. Legendary Wingman;</p>
+<p>c. Most Loyal Bro;</p>
+<p>d. Supreme Problem Solver;</p>
+<p>e. Keeper of the Bro Code.</p>
+<p>Awards shall be honorary and shall not establish legal superiority over other Bros.</p>
+<p>The selection procedure shall be established before voting begins.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 108 — THE LAW OF THE BRO ANNOUNCEMENT</h3>
+<p>A significant event concerning the Brotherhood may be formally announced.</p>
+<p>Announcements shall not disclose private information without permission.</p>
+<p>No Bro shall fabricate a significant event to obtain ceremonial recognition.</p>
+<p>The announcement may be entered into the historical register.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 109 — THE LAW OF THE HISTORICAL RECORD</h3>
+<p>Significant events involving the Brotherhood may be recorded in an official historical register.</p>
+<p>Records shall distinguish verified facts from humorous recollections.</p>
+<p>No Bro shall knowingly alter historical records to falsely accuse another member.</p>
+<p>Corrections may be made where inaccuracies are identified.</p>
+<p>Private information shall remain protected under Book XVIII.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 110 — THE SEVEN DEADLY SINS OF BROTHERHOOD</h3>
+<p>The following conduct shall be recognized as the Seven Deadly Sins of Brotherhood:</p>
+<p>Betraying a Bro for personal romantic advancement.</p>
+<p>Deliberately pursuing a fellow Bro&#x27;s former partner in violation of Article 2.</p>
+<p>Exposing a confidential secret with malicious intent.</p>
+<p>Abandoning a Bro in a genuine emergency.</p>
+<p>Deliberately sabotaging a fellow Bro&#x27;s significant opportunity.</p>
+<p>Fabricating evidence to damage another Bro&#x27;s reputation.</p>
+<p>Repeatedly exploiting the trust of fellow Bros without remorse.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 111 — THE PROHIBITION OF THE UNJUSTIFIED ABANDONMENT</h3>
+<p>No Bro shall deliberately abandon another Bro in circumstances involving a genuine and foreseeable risk to safety.</p>
+<p>A Bro shall make reasonable efforts to obtain appropriate assistance.</p>
+<p>No Bro shall be required to place himself in danger where doing so would create an unreasonable risk.</p>
+<p>This Article shall take precedence over ordinary social obligations.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 112 — THE PROHIBITION OF THE ULTIMATE BETRAYAL</h3>
+<p>The Ultimate Betrayal shall constitute the most serious category of offense recognized by this Code.</p>
+<p>It shall require deliberate and substantial harm to the trust forming the foundation of the Brotherhood.</p>
+<p>No accusation of Ultimate Betrayal shall be accepted without a reasonable examination of the circumstances.</p>
+<p>The Council shall consider whether reconciliation remains possible.</p>
+<p>No Bro shall be declared permanently unworthy of friendship solely by an arbitrary Council decision.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 113 — THE LAW OF THE BRO ABOVE ALL</h3>
+<p>Every Bro shall recognize that Brotherhood is founded upon mutual loyalty rather than blind obedience.</p>
+<p>No Bro shall be required to support wrongdoing merely because another Bro requests it.</p>
+<p>Honest disagreement shall be recognized as compatible with genuine Brotherhood.</p>
+<p>The dignity and safety of every individual shall remain protected.</p>
+<p>This Article shall govern the interpretation of all provisions concerning loyalty.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 114 — THE LAW OF PUBLIC LOYALTY</h3>
+<p>A Bro shall not deliberately humiliate another Bro in the presence of outsiders.</p>
+<p>A Bro shall make reasonable efforts to preserve the dignity of fellow Bros during public disagreements.</p>
+<p>Private disputes shall, wherever reasonably possible, be addressed privately.</p>
+<p>No Bro shall be required to defend another Bro&#x27;s dishonest or harmful conduct.</p>
+<p>Public loyalty shall not supersede the obligation to act honestly.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 115 — THE LAW OF THE BRO INTRODUCTION</h3>
+<p>A Bro introducing another Bro to an unfamiliar individual shall make reasonable efforts to provide an appropriate introduction.</p>
+<p>No Bro shall deliberately invent embarrassing personal information during such introduction.</p>
+<p>A nickname may be used where commonly accepted by the individual concerned.</p>
+<p>The introduced Bro shall retain the right to correct any materially inaccurate statement.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 116 — THE LAW OF PUBLIC EMBARRASSMENT</h3>
+<p>No Bro shall deliberately reveal an embarrassing personal incident involving another Bro for the purpose of obtaining social approval.</p>
+<p>Stories previously agreed to be private shall remain confidential.</p>
+<p>Friendly teasing shall be permitted where it remains mutually acceptable.</p>
+<p>A Bro who has been asked to stop shall cease the conduct within a reasonable period.</p>
+<p>Repeated violations may constitute harassment rather than ordinary joking.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 117 — THE LAW OF THE PUBLIC ARGUMENT</h3>
+<p>No Bro shall deliberately provoke another Bro into an argument in order to entertain spectators.</p>
+<p>A Bro shall be permitted to disagree openly and respectfully.</p>
+<p>Neither seniority nor popularity shall determine the correctness of an argument.</p>
+<p>Serious disagreements shall be resolved in accordance with Book VII.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 118 — THE LAW OF THE BRO&#x27;S REPUTATION</h3>
+<p>A Bro shall not knowingly spread false information concerning another Bro.</p>
+<p>Honest criticism shall not constitute a violation.</p>
+<p>No Bro shall fabricate achievements, relationships or personal circumstances on behalf of another Bro without consent.</p>
+<p>Deliberate reputational damage shall constitute an aggravating circumstance under Article 44.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 119 — THE LAW OF THE FIRST DECLARATION</h3>
+<p>Where a Bro openly declares romantic interest in an individual, fellow Bros shall exercise reasonable discretion before pursuing the same individual.</p>
+<p>Such declaration shall not establish exclusive rights over the individual concerned.</p>
+<p>No Bro shall deliberately conceal competing intentions.</p>
+<p>The individual concerned shall retain complete freedom to determine her own preferences.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 120 — THE PROHIBITION OF THE SECRET PURSUIT</h3>
+<p>No Bro shall secretly pursue an individual while simultaneously pretending to assist another Bro in pursuing the same individual.</p>
+<p>Such conduct shall constitute a breach of trust.</p>
+<p>The offense shall be considered aggravated where false advice or fabricated information was used.</p>
+<p>Honest disclosure of competing interests shall not constitute an offense by itself.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 121 — THE LAW OF THE FRIEND&#x27;S CRUSH</h3>
+<p>A Bro informed of another Bro&#x27;s romantic interest shall exercise reasonable discretion.</p>
+<p>No Bro shall intentionally ridicule another Bro for expressing genuine romantic feelings.</p>
+<p>No Bro shall deliberately interfere with the opportunity of another Bro solely for amusement.</p>
+<p>The individual concerned shall remain free to accept or reject any romantic interest.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 122 — THE LAW OF THE FORMER DATE</h3>
+<p>The prohibition established under Article 2 shall principally concern former romantic partners.</p>
+<p>A casual acquaintance or unsuccessful first date shall not automatically qualify as a former relationship.</p>
+<p>Nevertheless, a Bro shall exercise discretion where another Bro has expressed significant emotional attachment.</p>
+<p>Deliberate deception shall remain prohibited regardless of the technical classification of the previous encounter.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 123 — THE LAW OF THE DOUBLE BRO BETRAYAL</h3>
+<p>A Double Bro Betrayal shall occur where two or more Bros knowingly coordinate conduct intended to deceive a third Bro.</p>
+<p>Each participating Bro shall be individually responsible for his contribution.</p>
+<p>The existence of multiple participants shall constitute an aggravating circumstance.</p>
+<p>No Bro shall escape responsibility by claiming that another participant initiated the conduct.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 124 — THE LAW OF THE ROMANTIC WITHDRAWAL</h3>
+<p>A Bro may withdraw from a romantic pursuit at any time.</p>
+<p>No fellow Bro shall ridicule such withdrawal where it is made in good faith.</p>
+<p>A Bro shall not be obligated to continue pursuing an individual merely to preserve his reputation.</p>
+<p>Withdrawal shall not automatically constitute a breach of the Wingman obligations.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 125 — THE LAW OF THE BORROWED MONEY</h3>
+<p>A Bro borrowing money from another Bro shall make reasonable efforts to repay the agreed amount.</p>
+<p>The repayment date shall be established before or at the time of the loan.</p>
+<p>Where repayment becomes impossible within the agreed period, the borrowing Bro shall communicate the circumstances honestly.</p>
+<p>No Bro shall deliberately exploit friendship to avoid legitimate financial obligations.</p>
+<p>The amount borrowed shall not determine the importance of the obligation.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 126 — THE LAW OF THE SHARED BILL</h3>
+<p>Where Bros agree to share expenses, each participant shall contribute according to the established arrangement.</p>
+<p>No Bro shall knowingly impose an undisclosed expense upon another participant.</p>
+<p>The existence of Brotherhood shall not create an automatic obligation to pay another Bro&#x27;s personal expenses.</p>
+<p>Disputed expenses shall be resolved through transparent discussion.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 127 — THE PROHIBITION OF THE FINANCIAL EXPLOITATION</h3>
+<p>No Bro shall repeatedly borrow money without making reasonable efforts to repay it.</p>
+<p>A Bro shall not manipulate another Bro&#x27;s loyalty to obtain financial advantages.</p>
+<p>Deliberate misrepresentation concerning the purpose of a loan shall constitute an aggravating circumstance.</p>
+<p>No Bro shall be required to lend money he cannot reasonably afford to lend.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 128 — THE LAW OF THE FREE OFFER</h3>
+<p>A Bro offering to pay for another Bro shall not automatically acquire the right to demand repayment.</p>
+<p>Where repayment is expected, such expectation shall be communicated beforehand.</p>
+<p>A gift shall not be retrospectively converted into a debt.</p>
+<p>No Bro shall use a voluntary gift as a means of controlling another Bro.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 129 — THE LAW OF THE LAST COIN</h3>
+<p>No Bro shall knowingly take another Bro&#x27;s money without permission.</p>
+<p>Borrowed change shall be returned within a reasonable period.</p>
+<p>Small amounts shall not become exempt from repayment merely because they are considered insignificant.</p>
+<p>Repeated minor debts may be consolidated into one settlement.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 130 — THE PROHIBITION OF UNAUTHORIZED BORROWING</h3>
+<p>No Bro shall take another Bro&#x27;s personal property without permission.</p>
+<p>The phrase &quot;We&#x27;re Bros&quot; shall not constitute sufficient authorization.</p>
+<p>Borrowed property shall be returned in substantially the same condition, subject to ordinary wear.</p>
+<p>Any accidental damage shall be disclosed promptly.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 131 — THE LAW OF THE BORROWED CLOTHING</h3>
+<p>A Bro borrowing clothing shall make reasonable efforts to return it clean and undamaged.</p>
+<p>Clothing borrowed for a temporary occasion shall not be treated as permanently transferred.</p>
+<p>No Bro shall claim ownership merely because the clothing has remained in his possession for an extended period.</p>
+<p>The original owner shall retain the right to request its return.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 132 — THE LAW OF THE PERSONAL DEVICE</h3>
+<p>A Bro shall not access another Bro&#x27;s personal device without permission.</p>
+<p>Private messages, photographs and accounts shall remain protected.</p>
+<p>No Bro shall deliberately inspect private communications merely because a device has been left unattended.</p>
+<p>Emergency access may be justified where necessary to obtain assistance or prevent serious harm.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 133 — THE LAW OF THE LOST PROPERTY</h3>
+<p>A Bro discovering property belonging to another Bro shall make reasonable efforts to return it.</p>
+<p>No Bro shall knowingly retain lost property while concealing its discovery.</p>
+<p>The owner shall be notified where reasonably possible.</p>
+<p>The discovery of valuable property shall not create ownership rights.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 134 — THE LAW OF THE SHARED SPACE</h3>
+<p>Bros sharing a residence or temporary accommodation shall respect each other&#x27;s reasonable privacy.</p>
+<p>Shared areas shall be maintained in a reasonably usable condition.</p>
+<p>No Bro shall intentionally damage shared property.</p>
+<p>Individual responsibilities shall be established through mutual agreement.</p>
+<p>No Bro shall claim unrestricted authority over a shared space merely because he uses it more frequently.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 135 — THE LAW OF THE EMERGENCY CALL</h3>
+<p>A Bro receiving a credible emergency request shall make reasonable efforts to establish the nature of the emergency.</p>
+<p>Where appropriate, the Bro shall contact emergency services or another qualified source of assistance.</p>
+<p>A Bro shall not delay necessary assistance for the purpose of preserving a social arrangement.</p>
+<p>No Bro shall be required to undertake an action presenting an unreasonable personal risk.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 136 — THE LAW OF THE SAFE RETURN</h3>
+<p>Bros participating in a shared outing shall make reasonable efforts to ensure that everyone can return safely.</p>
+<p>No Bro shall pressure another Bro to travel with an unsafe or unsuitable driver.</p>
+<p>A Bro shall not be ridiculed for choosing a safe means of transportation.</p>
+<p>The availability of safe transport shall take precedence over convenience.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 137 — THE LAW OF THE UNEXPECTED ABSENCE</h3>
+<p>Where a Bro unexpectedly becomes unreachable during a situation presenting reasonable safety concerns, fellow Bros may make proportionate efforts to establish his well-being.</p>
+<p>Such efforts shall respect reasonable privacy.</p>
+<p>No Bro shall falsely report an emergency as a prank.</p>
+<p>Deliberate false emergency reports may constitute a serious violation.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 138 — THE LAW OF THE DISTRESSED BRO</h3>
+<p>A Bro experiencing significant personal distress shall be treated with dignity and consideration.</p>
+<p>Fellow Bros shall not dismiss genuine concerns merely because they are unfamiliar with the circumstances.</p>
+<p>No Bro shall be required to provide professional assistance beyond his competence.</p>
+<p>Appropriate outside help shall be encouraged where necessary.</p>
+<p>Confidentiality shall not prevent seeking assistance when someone&#x27;s safety is at risk.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 139 — THE PRINCIPLE OF EQUAL BROHOOD</h3>
+<p>Every recognized Bro shall be subject to the same fundamental principles.</p>
+<p>No individual shall possess unlimited privileges by virtue of wealth, popularity, age or seniority.</p>
+<p>Differences in personal circumstances shall be considered where relevant.</p>
+<p>The Council shall apply this Code consistently.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 140 — THE PROHIBITION OF SELECTIVE LOYALTY</h3>
+<p>No Bro shall invoke Brotherhood only when doing so provides personal advantage.</p>
+<p>The obligations of Brotherhood shall apply during both favorable and unfavorable circumstances.</p>
+<p>A Bro shall not demand loyalty while consistently refusing to demonstrate it.</p>
+<p>Repeated selective loyalty may constitute a breach of Article 3.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 141 — THE LAW OF THE BRO CODE ITSELF</h3>
+<p>Every Bro shall recognize this Code as a written framework governing the customs and obligations of the Brotherhood.</p>
+<p>No Bro shall knowingly misrepresent an original provision.</p>
+<p>No Bro shall claim that an invented rule was expressly established by Barney Stinson or the original television series.</p>
+<p>Rules inspired by How I Met Your Mother shall be distinguished from original supplementary legislation.</p>
+<p>The Code shall remain subject to expansion and revision.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 142 — THE LAW OF THE SUPREME BRO</h3>
+<p>The title of Supreme Bro may be awarded ceremonially to an individual recognized for exceptional loyalty and service.</p>
+<p>The title shall not establish authority to override this Code.</p>
+<p>The holder shall remain subject to every applicable provision.</p>
+<p>The title may be revoked following a fair review of serious misconduct.</p>
+<p>No individual shall be entitled to the title merely by declaring himself Supreme Bro.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">ARTICLE 143 — THE LAW OF THE ETERNAL BRO</h3>
+<p>Brotherhood shall not be measured exclusively by the frequency of communication.</p>
+<p>Temporary distance shall not automatically terminate an established friendship.</p>
+<p>A Bro shall be permitted to pursue independent ambitions and personal relationships.</p>
+<p>Genuine loyalty shall be demonstrated through conduct rather than constant availability.</p>
+<p>This Article shall survive every subsequent amendment to the Code.</p>
+<p>OFFICIAL LEGISLATIVE REGISTER</p>
+<p>GRAND LEGISLATIVE EDITION</p>
+<p>143</p>
+<p>Articles</p>
+<p>27</p>
+<p>Books</p>
+<p>I–XXVII</p>
+<p>Legislative divisions</p>
+<p>Active</p>
+<p>Draft status</p>
+<p>Grand Edition — Continued</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 144 — The Law of Suiting Up</h3>
+<p>A Bro shall never underestimate the power of a properly chosen outfit.</p>
+<p>A Bro shall dress appropriately for the occasion.</p>
+<p>A Bro who refuses to suit up shall not be forced, but shall be reminded of the opportunities he has voluntarily abandoned.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 145 — The Lemon Law</h3>
+<p>A Bro may establish a reasonable time limit for determining whether a date is going well.</p>
+<p>Neither party shall be obligated to continue a date that is uncomfortable or unwanted.</p>
+<p>The Lemon Law shall never be used as an excuse for disrespectful treatment.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 146 — The Hot-Crazy Principle</h3>
+<p>A Bro shall exercise judgment when choosing a romantic partner.</p>
+<p>No mathematical theory, graph, or fictional scale shall override actual respect, compatibility, or common sense.</p>
+<p>Any Bro using a chart to justify treating another person badly shall be subject to ridicule.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 147 — The Naked Man</h3>
+<p>No Bro shall be required to use a ridiculous romantic tactic.</p>
+<p>Any tactic involving surprise, pressure, or unwanted exposure is prohibited.</p>
+<p>The dignity and consent of all parties shall remain above every supposed legendary technique.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 148 — The Playbook</h3>
+<p>A Bro may maintain a collection of legendary stories, strategies, and social traditions.</p>
+<p>No entry shall be considered law merely because it appears in a book.</p>
+<p>The Playbook shall never be used to deceive, pressure, or humiliate another person.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 149 — The Definition of Legendary</h3>
+<p>A Bro shall strive to be remembered for loyalty, courage, humor, and good judgment.</p>
+<p>Legendary status cannot be purchased.</p>
+<p>Legendary status cannot be declared by the Bro himself.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 150 — The Legendary Entrance</h3>
+<p>A Bro entering a room shall acknowledge his fellow Bros.</p>
+<p>An entrance shall be considered legendary only if it does not interrupt an emergency, an important conversation, or another person&#x27;s moment.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 151 — The Story of the Night</h3>
+<p>Every legendary gathering may produce one official story.</p>
+<p>The story shall be told truthfully, except where harmless exaggeration is clearly understood.</p>
+<p>No Bro shall alter another Bro&#x27;s story to make himself appear superior.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 152 — The Rule of the Callback</h3>
+<p>A legendary joke may be repeated in future gatherings.</p>
+<p>A Bro shall not repeat a joke after it has become genuinely hurtful.</p>
+<p>The Council may officially retire an exhausted joke.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 153 — The Hall of Fame</h3>
+<p>The Council may recognize Bros for extraordinary acts of loyalty.</p>
+<p>Awards shall be based on actions, not popularity.</p>
+<p>No Bro shall nominate himself.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 154 — The Right to Challenge</h3>
+<p>Every Bro has the right to challenge another Bro to a friendly competition.</p>
+<p>Participation shall be voluntary.</p>
+<p>The rules must be established before the competition begins.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 155 — The Rematch</h3>
+<p>A defeated Bro may request one rematch.</p>
+<p>The victorious Bro may accept or decline.</p>
+<p>No Bro shall claim a victory obtained through cheating.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 156 — The Rule of Humility</h3>
+<p>A Bro may celebrate his victory.</p>
+<p>A Bro shall not humiliate the defeated participant.</p>
+<p>A Bro who cannot accept defeat shall temporarily lose the right to brag.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 157 — The Shared Victory</h3>
+<p>When a team wins, all participating Bros shall receive recognition.</p>
+<p>No Bro shall claim sole responsibility for a collective achievement.</p>
+<p>The Bro who contributed the least shall not necessarily receive the loudest applause.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 158 — The Sacred Game</h3>
+<p>During an agreed competition, the rules shall be respected.</p>
+<p>No Bro shall change the rules merely because he is losing.</p>
+<p>The phrase &quot;That doesn&#x27;t count&quot; shall require evidence.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 159 — The Right to Move On</h3>
+<p>Every Bro has the right to recover from a failed relationship.</p>
+<p>No Bro shall be mocked for having genuine feelings.</p>
+<p>The Council shall recognize that emotional recovery cannot be assigned a fixed deadline.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 160 — The Rebound Clause</h3>
+<p>No Bro shall knowingly exploit another person&#x27;s feelings following a breakup.</p>
+<p>A Bro shall be honest about his intentions.</p>
+<p>No person shall be treated as a temporary replacement.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 161 — The Confession of Feelings</h3>
+<p>A Bro may confess romantic feelings to another person.</p>
+<p>Such a confession shall not create an obligation to reciprocate.</p>
+<p>A Bro shall respect the answer, regardless of whether it is favorable.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 162 — The Friend Zone Dispute</h3>
+<p>Friendship shall never be considered a debt owed in exchange for romantic interest.</p>
+<p>A Bro may choose to remain friends or respectfully create distance.</p>
+<p>No Bro shall insult another person for not returning his feelings.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 163 — The Post-Breakup Boundary</h3>
+<p>A Bro shall respect the privacy of former partners.</p>
+<p>Private messages and personal information shall not be distributed for revenge.</p>
+<p>The end of a relationship shall not cancel the obligation to behave with dignity.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 164 — The Brotherhood Across Distance</h3>
+<p>Physical distance shall not automatically terminate Brohood.</p>
+<p>A Bro who moves away remains a Bro.</p>
+<p>Reunions shall be treated as opportunities to restore the Brotherhood.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 165 — The Silent Support</h3>
+<p>A Bro need not always provide advice.</p>
+<p>Sometimes listening is the most appropriate form of assistance.</p>
+<p>A Bro shall not force another Bro to discuss something he is not ready to discuss.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 166 — The Right to Change</h3>
+<p>Every Bro has the right to mature and change.</p>
+<p>Old traditions shall not be used to prevent personal development.</p>
+<p>A Bro who chooses a different path shall not automatically lose his title.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 167 — The Unconditional Respect</h3>
+<p>Brotherhood shall not depend on wealth, popularity, appearance, or social status.</p>
+<p>Every Bro shall be treated as an equal.</p>
+<p>Disagreement shall not constitute betrayal.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 168 — The Emergency Brotherhood</h3>
+<p>In a genuine emergency, ordinary disputes shall be suspended.</p>
+<p>A Bro shall prioritize safety and appropriate assistance.</p>
+<p>No Council verdict shall prevent a Bro from seeking help when needed.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 169 — The Exception of Consent</h3>
+<p>No article concerning another Bro&#x27;s personal relationships shall override the freely given consent of the people involved.</p>
+<p>The Council shall consider honest communication before declaring a violation.</p>
+<p>Silence shall never be interpreted as consent.</p>
+<section class="article-card">
+</section>
+<h3 class="article-heading">Article 170 — The Supreme Interpretation</h3>
+<p>The Bro Code shall be interpreted according to its fundamental purpose: loyalty, respect, honesty, and Brotherhood.</p>
+<p>No article shall be interpreted to justify cruelty, coercion, humiliation, or dishonesty.</p>
+<p>Where two articles conflict, the principle of mutual respect shall prevail.</p>
+</section>
+  <div style="text-align:center; margin-top:55px;">
+    <a class="top-link" href="#top">BACK TO TOP ↑</a>
+    <a class="top-link" href="index.html">← RETURN TO THE CODEX</a>
+  </div>
 </main>
-
 <footer>
-    <p>THE BRO CODEX · VOLUME I</p>
-    <p>An independent fan-created project.</p>
-    <p><a href="index.html">Back to Home</a></p>
+  <p>THE BRO CODEX · VOLUME I</p>
+  <p>An independent fan-created project.</p>
+  <p><a href="index.html">Back to Home</a></p>
 </footer>
-
 </body>
 </html>
