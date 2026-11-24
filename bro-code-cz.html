@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Velký zákoník bráchů — české vydání. 170 článků, 33 knih, jeden zákoník a jedno bratrství.">
+<title>Bro Code — České vydání</title>
+<style>
+:root {
+  --wine: #481725;
+  --wine2: #681f32;
+  --gold: #b99a62;
+  --cream: #f3efe5;
+  --paper: #fffdf8;
+  --ink: #292522;
+  --muted: #776f68;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--cream); color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif; line-height: 1.75;
+}
+header {
+  background: var(--wine); color: var(--cream); text-align: center;
+  padding: 48px 20px 42px; border-bottom: 5px solid var(--gold);
+}
+header .small { color: #d8c7a5; text-transform: uppercase; letter-spacing: .22em; font: 12px Arial, sans-serif; }
+header h1 { margin: 12px 0 4px; font-size: clamp(30px, 5vw, 52px); letter-spacing: .06em; }
+header p { margin: 8px 0 0; color: #e6dcca; font-style: italic; }
+nav {
+  background: #35101b; display: flex; justify-content: center; flex-wrap: wrap;
+  gap: 10px 26px; padding: 13px 16px; font: 13px Arial, sans-serif;
+}
+nav a { color: #f3efe5; text-decoration: none; }
+nav a:hover { color: var(--gold); }
+main { width: min(900px, calc(100% - 32px)); margin: 38px auto 70px; }
+.intro {
+  background: var(--paper); border: 1px solid #e5dccb; border-left: 4px solid var(--gold);
+  padding: 22px 26px; margin-bottom: 28px; box-shadow: 0 5px 18px #35101b0a;
+}
+.intro h2 { margin: 0 0 6px; color: var(--wine); font-size: 23px; }
+.intro p { margin: 5px 0; }
+.eyebrow { text-align: center; color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font: 12px Arial, sans-serif; }
+.book {
+  margin: 48px 0 22px; padding: 13px 18px; background: var(--wine);
+  color: var(--cream); border-left: 5px solid var(--gold);
+  font-size: clamp(19px, 3vw, 25px); line-height: 1.35;
+}
+.article {
+  color: var(--wine2); font-size: 20px; line-height: 1.4;
+  margin: 30px 0 10px; padding-bottom: 8px; border-bottom: 1px solid #d7c7aa;
+}
+main > p { margin: 0 0 12px; }
+blockquote {
+  margin: 18px 0; padding: 14px 20px; border-left: 3px solid var(--gold);
+  background: #f8f3e9; font-style: italic;
+}
+hr { border: 0; border-top: 1px solid #d7c7aa; margin: 28px 0; }
+footer {
+  background: var(--wine); color: #e6dcca; text-align: center;
+  padding: 30px 18px; border-top: 4px solid var(--gold); font-size: 14px;
+}
+footer a { color: #e6d1a5; }
+.top {
+  position: fixed; right: 20px; bottom: 20px; background: var(--wine2);
+  color: white; border: 1px solid var(--gold); border-radius: 50%;
+  width: 44px; height: 44px; display: grid; place-items: center;
+  text-decoration: none; font: 20px Arial, sans-serif; box-shadow: 0 3px 12px #0003;
+}
+@media (max-width: 600px) {
+  header { padding: 35px 16px; }
+  main { width: min(100% - 22px, 900px); margin-top: 22px; }
+  .intro { padding: 17px; }
+  .article { font-size: 18px; }
+}
+</style>
+</head>
+<body id="top">
+<header>
+  <div class="small">Oficiální pravidla bratrstva</div>
+  <h1>THE BRO CODEX</h1>
+  <p>Nepsaná pravidla. Nyní sepsaná.</p>
+</header>
+<nav>
+  <a href="index.html">Úvodní stránka</a>
+  <a href="bro-code.html">Bro Code</a>
+  <a href="bro-kodex.html">Bro Kodex</a>
+  <a href="zakonik.html">Zákoník</a>
+</nav>
+<main>
+  <section class="intro">
+    <h2>Velký zákoník bráchů — české vydání</h2>
+    <p>Kompletní české znění Bro Code, od prvního článku až po závěrečné ustanovení.</p>
+    <p><strong>170 článků • 33 knih • Jeden zákoník • Jedno bratrství</strong></p>
+  </section>
+  <p class="eyebrow">VELKÝ ZÁKONÍK BRÁCHŮ — ČESKÉ VYDÁNÍ • ČLÁNKY 1–170</p>
+<h3 class="article">Článek 1 — Bros Before Hoes (Bráchové před holkama)</h3>
+<p>Brácha musí vždy upřednostnit svého bráchu před jakoukoli romantickou známostí.</p>
+<p>Žádná holka nesmí přijít mezi dva bráchy.</p>
+<p>Brácha nikdy nesmí obětovat dlouholeté přátelství kvůli krátkodobému romantickému zájmu.</p>
+<p>Pokud se brácha ocitne v situaci, kdy si musí vybrat mezi bráchou a holkou, musí nejprve zvážit důležitost a okolnosti dané situace.</p>
+<p>Žádný brácha nesmí zapomenout, že holky mohou přicházet a odcházet, ale opravdové bratrství má vydržet navždy.</p>
+<h3 class="article">Článek 2 — Zákaz randění s bývalou přítelkyní bráchy</h3>
+<p>Brácha nikdy nesmí chodit s bývalou přítelkyní jiného bráchy bez jeho výslovného souhlasu.</p>
+<p>Toto pravidlo platí bez ohledu na to, jak dlouho je původní vztah ukončen.</p>
+<p>Čím vážnější byl původní vztah, tím závažnější je porušení tohoto článku.</p>
+<p>Výjimku lze udělit pouze po upřímném rozhovoru a svobodném souhlasu dotčeného bráchy.</p>
+<h3 class="article">Článek 3 — Slovo bráchy</h3>
+<p>Slovo bráchy musí mít stejnou váhu jako jeho podpis.</p>
+<p>Brácha nesmí vědomě lhát jinému bráchovi.</p>
+<p>Pokud brácha něco slíbí, musí se snažit svůj slib dodržet.</p>
+<p>Porušení důvěry musí být napraveno upřímnou omluvou.</p>
+<h3 class="article">Článek 4 — Zákaz zrady bráchy</h3>
+<p>Žádný brácha nesmí zradit jiného bráchu kvůli osobnímu prospěchu.</p>
+<p>Zrada zahrnuje úmyslné lhaní, podraz, zesměšňování a porušení důvěry.</p>
+<p>Brácha, který zradí jiného bráchu, musí přijmout následky svého jednání.</p>
+<p>Opakovaná zrada může vést k dočasnému nebo trvalému vyloučení z bratrstva.</p>
+<h3 class="article">Článek 5 — Posvátná povinnost pomoci bráchovi</h3>
+<p>Brácha musí být připraven pomoci jinému bráchovi v nouzi.</p>
+<p>Pomoc se poskytuje bez očekávání okamžité odměny.</p>
+<p>Žádný brácha nesmí ignorovat oprávněnou žádost o pomoc.</p>
+<p>Pokud brácha nemůže pomoci osobně, měl by se pokusit zajistit jinou vhodnou pomoc.</p>
+<h3 class="article">Článek 6 — Bratrská mlčenlivost</h3>
+<p>Vše, co je bráchovi sděleno v důvěře, musí zůstat v důvěře.</p>
+<p>Soukromé rozhovory nesmějí být zveřejňovány bez souhlasu.</p>
+<p>Žádný brácha nesmí používat svěřené tajemství jako zbraň proti jinému bráchovi.</p>
+<p>Výjimkou jsou situace, kdy je nutné vyhledat pomoc kvůli bezpečnosti někoho zúčastněného.</p>
+<h3 class="article">Článek 7 — Zákaz kazení příležitosti (Cock-Blocking)</h3>
+<p>Žádný brácha nesmí úmyslně překazit romantickou příležitost jiného bráchy.</p>
+<p>Výjimkou je situace, kdy druhá osoba nemá zájem nebo se necítí bezpečně.</p>
+<p>Brácha nesmí sabotovat rande kvůli vlastní žárlivosti.</p>
+<p>Pokud brácha neúmyslně překazí příležitost, měl by se pokusit situaci napravit.</p>
+<h3 class="article">Článek 8 — Vzájemný respekt</h3>
+<p>Každý brácha musí respektovat ostatní členy bratrstva.</p>
+<p>Žádný brácha nesmí ponižovat jiného bráchu kvůli jeho vzhledu, schopnostem nebo osobním rozhodnutím.</p>
+<p>Rozdílné názory nejsou důvodem k ukončení bratrství.</p>
+<p>Respekt musí být vzájemný.</p>
+<h3 class="article">Článek 9 — Pravidlo Wingmana</h3>
+<p>Každý brácha má právo požádat jiného bráchu, aby mu dělal Wingmana.</p>
+<p>Wingman musí podporovat svého bráchu a pomáhat mu zvládnout společenskou situaci.</p>
+<p>Wingman nesmí svého bráchu úmyslně zesměšnit.</p>
+<p>Wingman musí respektovat přání všech zúčastněných osob.</p>
+<h3 class="article">Článek 10 — Nezodpovězená zpráva</h3>
+<p>Brácha by neměl bezdůvodně ignorovat důležitou zprávu jiného bráchy.</p>
+<p>Pokud nemůže odpovědět okamžitě, měl by odpovědět, jakmile to bude možné.</p>
+<p>Zprávy označené jako naléhavé mají přednost před běžnou konverzací.</p>
+<p>Úmyslné ignorování důležité zprávy může být považováno za drobné porušení Bro Code.</p>
+<h2 class="book">KNIHA II — KAŽDODENNÍ PRAVIDLA BRATRSTVÍ</h2>
+<h3 class="article">Článek 11 — Zákaz veřejného ponižování</h3>
+<p>Žádný brácha nesmí úmyslně ponížit jiného bráchu před ostatními lidmi.</p>
+<p>Vtipy na účet bráchy jsou povoleny pouze tehdy, pokud jsou přijatelné pro obě strany.</p>
+<p>Soukromé slabosti nesmějí být používány k veřejnému zesměšňování.</p>
+<p>Brácha musí být připraven zastat se jiného bráchy, pokud je nespravedlivě ponižován.</p>
+<h3 class="article">Článek 12 — Poslední brácha</h3>
+<p>Žádný brácha nesmí bezdůvodně opustit jiného bráchu na společenské události.</p>
+<p>Pokud všichni ostatní odejdou, poslední zbývající brácha má povinnost zkontrolovat, zda je vše v pořádku.</p>
+<p>Žádný brácha nesmí nechat jiného bráchu samotného v nebezpečné situaci.</p>
+<h3 class="article">Článek 13 — Uznání bratrství</h3>
+<p>Bratrství vzniká vzájemným respektem, důvěrou a loajalitou.</p>
+<p>Brácha nemusí být biologickým bratrem, aby byl považován za skutečného bráchu.</p>
+<p>Nový člen musí být přijat stávající skupinou.</p>
+<p>Skutečné bratrství se potvrzuje činy, nikoli pouhými slovy.</p>
+<h3 class="article">Článek 14 — Posvátné podání ruky</h3>
+<p>Každá skupina bráchů může mít vlastní speciální podání ruky.</p>
+<p>Podání ruky musí být zachováno v původní podobě.</p>
+<p>Nový člen se musí naučit správné provedení.</p>
+<p>Úmyslné zapomenutí podání ruky může být považováno za drobný přestupek.</p>
+<h3 class="article">Článek 15 — Zákon třetího kola</h3>
+<p>Brácha doprovázející pár musí respektovat jejich společný čas.</p>
+<p>Pár musí zároveň respektovat přítomnost třetího bráchy.</p>
+<p>Žádný brácha nesmí být pravidelně využíván jako pouhá výplň společenské události.</p>
+<p>Pokud se brácha stane třetím kolem, ostatní by mu měli pomoci zapojit se do konverzace.</p>
+<h3 class="article">Článek 16 — Skupinový chat</h3>
+<p>Každý brácha musí respektovat pravidla společného skupinového chatu.</p>
+<p>Důležité informace musí být sdíleny se skupinou.</p>
+<p>Žádný brácha nesmí bezdůvodně zveřejňovat soukromé zprávy ze skupinového chatu.</p>
+<p>Spamování může být potrestáno dočasným zákazem přispívání.</p>
+<h3 class="article">Článek 17 — Společné tajemství</h3>
+<p>Tajemství sdílené mezi bráchy musí zůstat mezi nimi.</p>
+<p>Žádný brácha nesmí prozradit tajemství kvůli vlastní popularitě.</p>
+<p>Pokud se tajemství týká bezpečnosti někoho jiného, musí být možné vyhledat pomoc.</p>
+<p>Porušení tohoto článku je závažným narušením důvěry.</p>
+<h2 class="book">KNIHA III — LÁSKA, VZTAHY A BRATRSTVÍ</h2>
+<h3 class="article">Článek 18 — Právo prvního zájmu</h3>
+<p>Pokud brácha otevřeně projeví romantický zájem o určitou osobu, ostatní bráchové by měli jeho zájem respektovat.</p>
+<p>Žádný brácha nesmí tajně soupeřit s jiným bráchou o stejnou osobu.</p>
+<p>Pokud první brácha ztratí zájem, může být záležitost znovu otevřena.</p>
+<p>Toto pravidlo nesmí omezovat svobodnou volbu druhé osoby.</p>
+<h3 class="article">Článek 19 — Zákaz dvojité hry</h3>
+<p>Žádný brácha nesmí předstírat podporu jiného bráchy, zatímco mu za zády škodí.</p>
+<p>Tajné soupeření musí být považováno za porušení důvěry.</p>
+<p>Brácha musí jednat čestně, i když se jeho zájmy liší od zájmů ostatních.</p>
+<h3 class="article">Článek 20 — Pravidlo prvního rande</h3>
+<p>Brácha, který jde na první rande, má právo na podporu ostatních bráchů.</p>
+<p>Ostatní bráchové nesmějí bez jeho souhlasu zasahovat do průběhu rande.</p>
+<p>Po skončení rande může být svoláno neformální hodnocení.</p>
+<p>Žádný brácha nesmí být nucen sdílet detaily, které chce zachovat v soukromí.</p>
+<h3 class="article">Článek 21 — Ochrana po rozchodu</h3>
+<p>Brácha, který právě ukončil vztah, má právo na podporu ostatních.</p>
+<p>Ostatní bráchové nesmějí využívat jeho zranitelnosti.</p>
+<p>Žádný brácha nesmí bez souhlasu zveřejňovat podrobnosti rozchodu.</p>
+<p>Rada může doporučit dočasné omezení kontaktu s bývalou partnerkou, pokud si to dotčený brácha přeje.</p>
+<h3 class="article">Článek 22 — Zákaz zoufalé zprávy</h3>
+<p>Žádný brácha nesmí být zesměšňován za to, že projeví upřímný zájem o jiného člověka.</p>
+<p>Brácha by měl před odesláním důležité zprávy zvážit její obsah.</p>
+<p>Ostatní bráchové mohou nabídnout radu, ale nesmějí přebírat kontrolu nad jeho komunikací.</p>
+<p>Soukromé zprávy musí zůstat soukromé.</p>
+<h3 class="article">Článek 23 — Přednost Wingmana</h3>
+<p>Wingman musí během dohodnuté společenské události podporovat bráchu, kterému pomáhá.</p>
+<p>Nesmí úmyslně přesměrovat veškerou pozornost na sebe.</p>
+<p>Pokud Wingman sám projeví zájem o stejnou osobu, musí situaci otevřeně vyřešit.</p>
+<p>Zrada Wingmana je považována za závažný přestupek.</p>
+<h3 class="article">Článek 24 — Bývalý Wingman</h3>
+<p>Brácha, který jednou plnil roli Wingmana, neztrácí automaticky nárok na pomoc.</p>
+<p>Povinnost vzájemné podpory trvá i po skončení konkrétní společenské události.</p>
+<p>Žádný brácha nesmí odmítnout pomoc pouze proto, že ji v minulosti sám poskytoval.</p>
+<h3 class="article">Článek 25 — Falešný zájem</h3>
+<p>Žádný brácha nesmí předstírat romantický zájem o osobu pouze proto, aby poškodil jiného bráchu.</p>
+<p>Úmyslné manipulování s city druhých je zakázáno.</p>
+<p>Pokud dojde k nedorozumění, musí být situace vyjasněna bez zbytečného odkladu.</p>
+<h3 class="article">Článek 26 — Romantické přiznání</h3>
+<p>Brácha, který se dozví o citech jiného bráchy, musí s touto informací zacházet důvěrně.</p>
+<p>Žádný brácha nesmí využívat cizí city k vlastnímu prospěchu.</p>
+<p>Přiznání citů nesmí být důvodem k zesměšňování.</p>
+<p>Každý brácha musí respektovat rozhodnutí druhé osoby.</p>
+<h3 class="article">Článek 27 — Právo na pozvání</h3>
+<p>Každý brácha má právo být pozván na důležitou společenskou událost pořádanou ostatními bráchy.</p>
+<p>Žádný brácha nesmí být úmyslně vynechán pouze kvůli osobním neshodám.</p>
+<p>Pokud je událost určena pouze pro omezený počet osob, musí být výběr účastníků proveden spravedlivě.</p>
+<p>Brácha, který nemůže dorazit, neztrácí své postavení v bratrstvu.</p>
+<h3 class="article">Článek 28 — Určený Wingman</h3>
+<p>Před začátkem společenské události může být určen jeden nebo více Wingmanů.</p>
+<p>Určený Wingman má povinnost pomáhat bráchovi, kterému byl přidělen.</p>
+<p>Wingman nesmí opustit svou povinnost bez rozumného důvodu.</p>
+<p>Pokud se Wingman dostane do vlastní komplikované situace, může požádat o vystřídání.</p>
+<h3 class="article">Článek 29 — Pravidlo skupinové fotografie</h3>
+<p>Každý brácha má právo být zahrnut do společné fotografie.</p>
+<p>Žádný brácha nesmí být úmyslně odstraněn z fotografie kvůli osobnímu sporu.</p>
+<p>Fotografie nesmí být zveřejněna způsobem, který by jiného bráchu úmyslně poškodil.</p>
+<p>Každý brácha má právo odmítnout zveřejnění své fotografie.</p>
+<h3 class="article">Článek 30 — Nečekané setkání</h3>
+<p>Pokud brácha náhodně potká jiného bráchu na veřejnosti, měl by ho pozdravit.</p>
+<p>Ignorování jiného bráchy bez závažného důvodu je považováno za neslušné.</p>
+<p>Pokud je brácha v přítomnosti dalších osob, měl by ostatní bráchy představit.</p>
+<p>Bratrské pouto nesmí být zapíráno kvůli společenskému postavení.</p>
+<h3 class="article">Článek 31 — Hudební doprovod</h3>
+<p>Každá skupina bráchů může mít své oficiální hymny a společné písně.</p>
+<p>Při zaznění oficiální hymny mají všichni přítomní bráchové právo se připojit.</p>
+<p>Žádný brácha nesmí být zesměšňován za svůj hudební vkus.</p>
+<p>Píseň, která se stane legendární, může být zařazena do oficiálního hudebního archivu bratrstva.</p>
+<h3 class="article">Článek 32 — Právo na radu</h3>
+<p>Každý brácha má právo požádat ostatní o radu.</p>
+<p>Brácha poskytující radu musí jednat upřímně.</p>
+<p>Nevyžádané rady by neměly být vnucovány.</p>
+<p>Konečné rozhodnutí vždy náleží bráchovi, kterého se daná záležitost týká.</p>
+<h3 class="article">Článek 33 — Osobní prostor</h3>
+<p>Každý brácha má právo na vlastní soukromí.</p>
+<p>Ostatní bráchové nesmějí bez svolení prohledávat jeho osobní věci.</p>
+<p>Půjčování osobních předmětů vyžaduje souhlas jejich majitele.</p>
+<p>Bratrství nezbavuje žádného člena práva na osobní hranice.</p>
+<h2 class="book">KNIHA VII — TRADICE A BRATRSKÉ CEREMONIE</h2>
+<h3 class="article">Článek 34 — Pravidlo významných událostí</h3>
+<p>Významné životní události jednoho bráchy mají být uznány ostatními členy bratrstva.</p>
+<p>Narozeniny, úspěchy a důležité osobní milníky si zaslouží přiměřenou pozornost.</p>
+<p>Žádný brácha nesmí úmyslně ignorovat významný den jiného bráchy.</p>
+<p>Velikost oslavy není měřítkem skutečné loajality.</p>
+<h3 class="article">Článek 35 — Zákon Wingmana</h3>
+<p>Wingman musí být připraven podpořit svého bráchu v nečekané společenské situaci.</p>
+<p>Wingman nesmí úmyslně zničit příležitost, kterou má pomáhat vytvořit.</p>
+<p>Pokud se situace stane nepříjemnou, Wingman může pomoci svému bráchovi důstojně odejít.</p>
+<p>Nejvyšší povinností Wingmana je respektovat všechny zúčastněné osoby.</p>
+<h3 class="article">Článek 36 — Archiv společných fotografií</h3>
+<p>Bratrstvo může vést archiv společných fotografií a vzpomínek.</p>
+<p>Archiv má sloužit k uchovávání důležitých okamžiků.</p>
+<p>Žádný brácha nesmí svévolně ničit společné vzpomínky.</p>
+<p>Citlivé materiály musí být uchovávány se souhlasem zúčastněných.</p>
+<h3 class="article">Článek 37 — Pravidlo nečekaného hosta</h3>
+<p>Brácha, který přivede na společnou událost nového hosta, odpovídá za jeho slušné představení ostatním.</p>
+<p>Host musí respektovat pravidla bratrstva.</p>
+<p>Žádný brácha nesmí být nucen přijmout hosta, který se chová neuctivě.</p>
+<p>Nový host nezískává automaticky status bráchy.</p>
+<h3 class="article">Článek 38 — Společná hudební tradice</h3>
+<p>Bratrstvo může určit skladbu, která bude reprezentovat jeho historii.</p>
+<p>Tato skladba může být přehrávána při významných společných událostech.</p>
+<p>Žádný brácha nesmí záměrně narušovat její přehrávání pouze za účelem vyvolání konfliktu.</p>
+<p>Změna oficiální skladby vyžaduje souhlas Rady.</p>
+<h2 class="book">KNIHA VIII — SPORY, SOUDY A TRESTY</h2>
+<h3 class="article">Článek 39 — Řešení bratrských sporů</h3>
+<p>Každý spor mezi dvěma bráchy má být nejprve řešen přímým rozhovorem.</p>
+<p>Ostatní bráchové se nesmějí bezdůvodně stavět na jednu stranu.</p>
+<p>Pokud přímé řešení selže, může být svolána Rada.</p>
+<p>Žádný spor nesmí být používán jako záminka k veřejnému ponižování.</p>
+<h3 class="article">Článek 40 — Bratrské slyšení</h3>
+<p>Při závažném porušení Bro Code může být svoláno oficiální slyšení.</p>
+<p>Obě strany mají právo předložit svou verzi událostí.</p>
+<p>Rozhodnutí musí být založeno na dostupných skutečnostech.</p>
+<p>Osobní antipatie nesmějí ovlivnit konečný rozsudek.</p>
+<h3 class="article">Článek 41 — Povinná omluva</h3>
+<p>Brácha, který prokazatelně poruší pravidla, musí uznat své jednání.</p>
+<p>Omluva musí být upřímná a nesmí být doprovázena výmluvami.</p>
+<p>Poškozený brácha není povinen omluvu okamžitě přijmout.</p>
+<p>Samotná omluva nezaručuje automatické obnovení důvěry.</p>
+<h3 class="article">Článek 42 — Zákaz osobní msty</h3>
+<p>Žádný brácha nesmí vykonávat osobní pomstu za drobné porušení pravidel.</p>
+<p>Jakékoli následky musí být přiměřené závažnosti přestupku.</p>
+<p>Rada může zasáhnout, pokud spor začne ohrožovat celé bratrstvo.</p>
+<p>Odplata nesmí zahrnovat ponižování, vyhrožování ani ubližování.</p>
+<h3 class="article">Článek 43 — Dočasné pozastavení členství</h3>
+<p>Brácha, který opakovaně porušuje pravidla, může být dočasně zbaven některých výsad bratrstva.</p>
+<p>Doba pozastavení musí být přiměřená závažnosti přestupku.</p>
+<p>Dotčený brácha musí být informován o důvodu rozhodnutí.</p>
+<p>Po uplynutí stanovené doby může být jeho členství obnoveno.</p>
+<h2 class="book">KNIHA IX — ZÁVAŽNÉ PŘESTUPKY A ZRADA</h2>
+<h3 class="article">Článek 44 — Velká zrada</h3>
+<p>Úmyslná zrada důvěry bráchy je považována za jeden z nejzávažnějších přestupků.</p>
+<p>Velká zrada zahrnuje úmyslné poškození pověsti, zneužití tajemství nebo vědomé podvedení jiného bráchy.</p>
+<p>Závažnost zrady posuzuje Rada.</p>
+<p>Trest musí odpovídat okolnostem a následkům jednání.</p>
+<h3 class="article">Článek 45 — Falešný Wingman</h3>
+<p>Za falešného Wingmana je považován brácha, který předstírá podporu, ale ve skutečnosti úmyslně škodí.</p>
+<p>Takové jednání představuje porušení důvěry.</p>
+<p>Falešný Wingman může přijít o právo vykonávat tuto funkci.</p>
+<p>Opakované porušení může vést k dalším disciplinárním opatřením.</p>
+<h3 class="article">Článek 46 — Zrada svěřeného tajemství</h3>
+<p>Prozrazení citlivého tajemství bez souhlasu jeho majitele je závažným přestupkem.</p>
+<p>Závažnost se určuje podle citlivosti informace a způsobené újmy.</p>
+<p>Brácha, který tajemství prozradil, musí učinit přiměřené kroky k nápravě.</p>
+<p>Výjimkou z mlčenlivosti zůstává situace, kdy je nutné zabránit nebezpečí nebo zajistit pomoc.</p>
+<h3 class="article">Článek 47 — Vydávání se za bráchu</h3>
+<p>Žádný člověk nesmí bez svolení vystupovat jménem jiného bráchy.</p>
+<p>Zakázáno je zejména vydávání se za něj v soukromé komunikaci.</p>
+<p>Žádný brácha nesmí používat identitu jiného bráchy k získání osobního prospěchu.</p>
+<p>Porušení tohoto článku může být považováno za závažnou zradu.</p>
+<h3 class="article">Článek 48 — Opakovaný provinilec</h3>
+<p>Brácha, který opakovaně porušuje stejná pravidla, podléhá přísnějšímu posouzení.</p>
+<p>Předchozí upozornění musí být při rozhodování zohledněna.</p>
+<p>Opakované přestupky mohou vést k pozastavení členství.</p>
+<p>Každý brácha má právo prokázat, že své jednání změnil.</p>
+<h2 class="book">KNIHA X — RADA BRÁCHŮ A JEJÍ PRAVOMOCI</h2>
+<h3 class="article">Článek 49 — Zřízení Rady bráchů</h3>
+<p>Nejvyšším rozhodovacím orgánem bratrstva je Rada bráchů.</p>
+<p>Rada se skládá z vybraných členů, kteří mají důvěru ostatních.</p>
+<p>Každý člen Rady musí dodržovat stejná pravidla jako ostatní bráchové.</p>
+<p>Členství v Radě nesmí být využíváno k osobnímu zvýhodňování.</p>
+<h3 class="article">Článek 50 — Pravomoci Rady</h3>
+<p>Rada má pravomoc posuzovat závažná porušení Bro Code.</p>
+<p>Rada může navrhovat nové články a dodatky.</p>
+<p>Rada může rozhodovat o dočasném pozastavení členství.</p>
+<p>Rada musí jednat spravedlivě a nestranně.</p>
+<p>Žádné rozhodnutí Rady nesmí porušovat základní zásady respektu a svobodného souhlasu.</p>
+<h3 class="article">Článek 51 — Jednomyslný rozsudek</h3>
+<p>U nejzávažnějších případů může být vyžadována jednomyslná shoda všech přítomných členů Rady.</p>
+<p>Každý člen má právo vyjádřit svůj názor.</p>
+<p>Člen Rady, který je přímo zapojen do projednávaného sporu, se nesmí účastnit hlasování.</p>
+<p>Pokud není dosaženo jednomyslnosti, musí být případ znovu projednán.</p>
+<h3 class="article">Článek 52 — Drobné přestupky</h3>
+<p>Za drobný přestupek se považuje porušení pravidel, které nezpůsobí závažnou újmu jinému bráchovi.</p>
+<p>Mezi drobné přestupky patří zapomenutí důležitého setkání, ignorování běžné zprávy nebo porušení drobné společenské tradice.</p>
+<p>Rada může za drobný přestupek udělit slovní napomenutí.</p>
+<p>Opakované drobné přestupky mohou být posuzovány jako závažnější provinění.</p>
+<h3 class="article">Článek 53 — Závažné přestupky</h3>
+<p>Za závažný přestupek se považuje úmyslné porušení důvěry, opakovaná zrada nebo vědomé poškození jiného bráchy.</p>
+<p>Závažný přestupek musí být projednán Radou.</p>
+<p>Obviněný brácha má právo předložit svou obhajobu.</p>
+<p>Rada může rozhodnout o omezení některých výsad nebo o dočasném pozastavení členství.</p>
+<h3 class="article">Článek 54 — Vyhnaný brácha</h3>
+<p>Brácha, který se dopustí mimořádně závažného porušení Bro Code, může být označen za vyhnaného bráchu.</p>
+<p>Vyhnaný brácha dočasně ztrácí právo využívat výhody vyplývající z členství v bratrstvu.</p>
+<p>Jeho návrat vyžaduje souhlas Rady.</p>
+<p>Vyhnání nesmí být používáno jako nástroj osobní pomsty.</p>
+<h3 class="article">Článek 55 — Právo na odvolání</h3>
+<p>Každý brácha má právo odvolat se proti rozhodnutí Rady.</p>
+<p>Odvolání musí obsahovat důvody, proč považuje původní rozhodnutí za nespravedlivé.</p>
+<p>Rada musí odvolání znovu posoudit.</p>
+<p>Konečné rozhodnutí musí být oznámeno všem zúčastněným stranám.</p>
+<h2 class="book">KNIHA XII — POSVÁTNÉ BRATRSKÉ TRADICE</h2>
+<h3 class="article">Článek 56 — Posvátný fist bump</h3>
+<p>Fist bump je považován za jeden ze základních symbolů bratrského uznání.</p>
+<p>Brácha nesmí úmyslně odmítnout fist bump jiného bráchy bez rozumného důvodu.</p>
+<p>Zvláštní druhy fist bumpů mohou být vyhrazeny pro významné okamžiky.</p>
+<p>Nový člen se musí naučit základní variantu.</p>
+<h3 class="article">Článek 57 — Bratrské přikývnutí (The Bro Nod)</h3>
+<p>Bratrské přikývnutí je neverbálním způsobem uznání jiného bráchy.</p>
+<p>Přikývnutí směrem vzhůru může být použito jako pozdrav známého bráchy.</p>
+<p>Přikývnutí směrem dolů může vyjadřovat respekt nebo uznání.</p>
+<p>Žádný brácha nesmí úmyslně ignorovat přikývnutí jiného bráchy, pokud ho zaregistruje.</p>
+<h3 class="article">Článek 58 — Legendární příběh</h3>
+<p>Každé bratrstvo může mít své legendární příběhy.</p>
+<p>Příběh se stává legendárním tehdy, když se opakovaně vypráví a připomíná významný společný okamžik.</p>
+<p>Žádný brácha nesmí bezdůvodně měnit zásadní skutečnosti příběhu.</p>
+<p>Příběhy nesmějí být používány k odhalování citlivých informací bez souhlasu zúčastněných.</p>
+<h3 class="article">Článek 59 — Výročí bratrství</h3>
+<p>Bratrstvo může ustanovit den svého vzniku jako oficiální výročí.</p>
+<p>Výročí má být připomínáno společným setkáním, pokud je to možné.</p>
+<p>Každý člen má právo navrhnout způsob oslavy.</p>
+<p>Zapomenutí výročí není automaticky důvodem k vyloučení, může však být předmětem přátelského připomenutí.</p>
+<h3 class="article">Článek 60 — Závěrečný zákon tradic</h3>
+<p>Tradice bratrstva musí být zachovávány, pokud jsou pro jeho členy stále významné.</p>
+<p>Tradice nesmějí být používány k ponižování nových členů.</p>
+<p>Každá tradice může být upravena rozhodnutím většiny.</p>
+<p>Žádná tradice nesmí mít vyšší autoritu než základní zásady Bro Code.</p>
+<h2 class="book">KNIHA XIII — STATUS A POSTAVENÍ BRÁCHY</h2>
+<h3 class="article">Článek 61 — Status bráchy</h3>
+<p>Každý přijatý člen bratrstva získává status bráchy.</p>
+<p>Status bráchy je založen na vzájemné důvěře a respektu.</p>
+<p>Status nesmí být udělován pouze na základě popularity.</p>
+<p>Každý brácha musí respektovat ostatní členy bez ohledu na jejich postavení.</p>
+<h3 class="article">Článek 62 — Původní brácha (Original Bro)</h3>
+<p>Původní brácha je členem, který se významně podílel na vzniku bratrstva.</p>
+<p>Původní brácha může mít zvláštní pravomoci při ustanovování tradic.</p>
+<p>Jeho postavení mu však nedává právo porušovat pravidla.</p>
+<p>Původní brácha musí být příkladem ostatním členům.</p>
+<h3 class="article">Článek 63 — Zákaz přetahování bráchů</h3>
+<p>Žádný člen nesmí úmyslně rozdělovat bratrstvo tím, že proti sobě staví jeho jednotlivé členy.</p>
+<p>Přátelství s jinými skupinami není zakázáno.</p>
+<p>Každý brácha má právo mít další přátele mimo bratrstvo.</p>
+<p>Úmyslné vytváření konfliktů mezi členy může být projednáno Radou.</p>
+<h3 class="article">Článek 64 — Nový brácha</h3>
+<p>Nový člen musí být přijat na základě vzájemného souhlasu.</p>
+<p>Nový brácha musí být seznámen se základními články Bro Code.</p>
+<p>Nový člen má stejná základní práva jako ostatní bráchové.</p>
+<p>Délka členství sama o sobě nezaručuje vyšší postavení.</p>
+<h3 class="article">Článek 65 — Titul bráchy</h3>
+<p>Titul bráchy představuje závazek vůči ostatním členům.</p>
+<p>Žádný člen nesmí používat tento titul pouze pro vlastní výhody.</p>
+<p>Skutečný brácha prokazuje svou loajalitu činy.</p>
+<p>Titul může být odebrán pouze po řádném projednání závažného porušení pravidel.</p>
+<h2 class="book">KNIHA XIV — RODINA, VZTAHY A ZAKÁZANÁ ÚZEMÍ</h2>
+<h3 class="article">Článek 66 — Sestra bráchy</h3>
+<p>Sestra bráchy musí být považována za osobu, vůči které se očekává zvláštní ohleduplnost.</p>
+<p>Žádný brácha nesmí využívat svého postavení k tomu, aby na ni vyvíjel nátlak.</p>
+<p>Pokud brácha projeví romantický zájem o sestru jiného bráchy, měl by o tom s dotčeným bráchou otevřeně komunikovat.</p>
+<p>Rozhodnutí sestry má vždy přednost před názorem ostatních členů bratrstva.</p>
+<h3 class="article">Článek 67 — Matka bráchy</h3>
+<p>Matka jiného bráchy musí být vždy respektována.</p>
+<p>Žádný brácha nesmí urážet matku jiného bráchy.</p>
+<p>Nabídka jídla od matky bráchy by měla být přijata s vděčností, pokud tomu nebrání osobní okolnosti.</p>
+<p>Brácha nesmí zneužívat pohostinnosti rodiny jiného bráchy.</p>
+<h3 class="article">Článek 68 — Tajné dvojité rande</h3>
+<p>Žádný brácha nesmí tajně organizovat romantické setkání, které by mohlo poškodit důvěru jiného bráchy.</p>
+<p>Pokud se setkání týká více členů bratrstva, musí být zachována otevřená komunikace.</p>
+<p>Zatajování důležitých informací za účelem manipulace je zakázáno.</p>
+<h3 class="article">Článek 69 — Zakázaná zamilovanost</h3>
+<p>Pokud se dva bráchové zamilují do stejné osoby, musí situaci řešit otevřeně a s respektem.</p>
+<p>Žádný brácha nesmí sabotovat šance jiného bráchy.</p>
+<p>Rozhodnutí dané osoby je konečné a nesmí být zpochybňováno.</p>
+<p>Rivalita nesmí vést k trvalému poškození bratrství.</p>
+<h3 class="article">Článek 70 — Zákaz využívání náhradního vztahu</h3>
+<p>Žádný brácha nesmí vstupovat do vztahu pouze za účelem vyvolání žárlivosti u jiného člověka.</p>
+<p>Brácha nesmí využívat jinou osobu jako prostředek k osobní pomstě.</p>
+<p>Pokud se taková situace objeví, musí být řešena upřímně.</p>
+<h3 class="article">Článek 71 — Výjimečné okolnosti bývalého vztahu</h3>
+<p>Rada může projednat výjimečné případy týkající se bývalých partnerů bráchů.</p>
+<p>Důležitými okolnostmi jsou délka původního vztahu, způsob jeho ukončení a současné vztahy mezi zúčastněnými.</p>
+<p>Žádné rozhodnutí nesmí nahradit svobodný souhlas osob, kterých se situace týká.</p>
+<p>Upřímná komunikace má přednost před tajnostmi.</p>
+<h2 class="book">KNIHA XV — SPOLEČNÉ VÝPRAVY A LEGENDÁRNÍ PLÁNY</h2>
+<h3 class="article">Článek 72 — Plánování legendární události</h3>
+<p>Každý brácha může navrhnout společnou událost.</p>
+<p>Ostatní členové by měli návrh zvážit s ohledem na časové a osobní možnosti.</p>
+<p>Plánování musí být dostatečně jasné, aby každý věděl, kdy a kde se událost koná.</p>
+<p>Žádný brácha nesmí úmyslně zatajovat důležité informace o společném plánu.</p>
+<h3 class="article">Článek 73 — Legendární příchod</h3>
+<p>Brácha má právo přijít na společnou událost se sebevědomím a stylem.</p>
+<p>Příchod nesmí být vykoupen ponižováním ostatních.</p>
+<p>Pokud brácha dorazí pozdě, měl by respektovat skutečnost, že ostatní již začali.</p>
+<p>Pozdní příchod není automaticky legendární.</p>
+<h3 class="article">Článek 74 — Vyprávění o společné výpravě</h3>
+<p>Po významné společné výpravě může být sepsán oficiální záznam.</p>
+<p>Záznam má obsahovat důležité okamžiky a zážitky všech účastníků.</p>
+<p>Žádný brácha nesmí úmyslně vynechat zásluhy jiného člena.</p>
+<p>Záznam může být zařazen do archivu bratrstva.</p>
+<h3 class="article">Článek 75 — Společná cesta</h3>
+<p>Při společné cestě musí každý brácha respektovat dohodnutý plán.</p>
+<p>Náklady musí být rozděleny spravedlivě podle předchozí dohody.</p>
+<p>Žádný brácha nesmí bezdůvodně ohrozit bezpečnost ostatních.</p>
+<p>Každý člen má právo navrhnout změnu programu.</p>
+<p>Společná cesta má být především zdrojem dobrých vzpomínek, nikoli zbytečných sporů.</p>
+<h3 class="article">Článek 76 — Zrušení na poslední chvíli</h3>
+<p>Brácha, který zruší účast na společné události, by měl ostatní informovat co nejdříve.</p>
+<p>Oprávněné důvody ke zrušení musí být respektovány.</p>
+<p>Opakované rušení bez vysvětlení může být považováno za nespolehlivé chování.</p>
+<p>Žádný brácha nesmí být nucen účastnit se události proti své vůli.</p>
+<h3 class="article">Článek 77 — Zásady právního výkladu</h3>
+<p>Každý článek Bro Code musí být vykládán v souladu se základními principy bratrství.</p>
+<p>Žádný brácha nesmí úmyslně překrucovat znění článku ve svůj prospěch.</p>
+<p>Při nejasnosti má přednost výklad podporující loajalitu, spravedlnost a vzájemný respekt.</p>
+<p>Konečný výklad závažných sporů náleží Radě bráchů.</p>
+<h3 class="article">Článek 78 — Hierarchie zákonů</h3>
+<h3 class="article">Článek 79 — Nepředvídané okolnosti</h3>
+<p>Situace, které nejsou výslovně upraveny žádným článkem, podléhají obecným zásadám Bro Code.</p>
+<p>Každý brácha musí při rozhodování použít zdravý rozum.</p>
+<p>Pokud situace vyžaduje rozhodnutí Rady, musí být svoláno mimořádné jednání.</p>
+<p>Nepředvídané okolnosti nesmějí být využívány jako záminka k porušování důvěry.</p>
+<h3 class="article">Článek 80 — Zákaz zneužívání mezer v zákoníku</h3>
+<p>Žádný brácha nesmí úmyslně využívat nejasnosti v zákoníku k poškození jiného bráchy.</p>
+<p>Technicky povolené jednání nemusí být automaticky považováno za správné.</p>
+<p>Úmyslné obcházení pravidel může být posuzováno stejně jako jejich přímé porušení.</p>
+<p>Rada může v případě potřeby navrhnout nový článek, který vzniklou mezeru odstraní.</p>
+<h3 class="article">Článek 81 — Nepsaná pravidla</h3>
+<p>Nepsané tradice mohou doplňovat ustanovení Bro Code.</p>
+<p>Nepsané pravidlo musí být dlouhodobě uznávané většinou bratrstva.</p>
+<p>Žádný brácha nesmí zpětně vytvořit nepsané pravidlo pouze proto, aby potrestal jiného bráchu.</p>
+<p>V případě sporu musí být existence takového pravidla prokázána.</p>
+<h3 class="article">Článek 82 — Nouzová výjimka</h3>
+<p>V případě skutečné nouze mohou být běžné společenské povinnosti dočasně pozastaveny.</p>
+<p>Bezpečnost a zdraví všech zúčastněných mají přednost před tradicemi.</p>
+<p>Brácha, který nemůže dodržet běžné pravidlo z důvodu nouze, se nedopouští přestupku.</p>
+<p>Po skončení nouzové situace se původní ustanovení znovu uplatňují.</p>
+<h3 class="article">Článek 83 — Postup při změně zákoníku</h3>
+<p>Každý brácha může navrhnout změnu nebo doplnění Bro Code.</p>
+<p>Návrh musí být předložen Radě.</p>
+<p>Rada musí návrh projednat a rozhodnout o jeho přijetí.</p>
+<p>Každá schválená změna musí být zaznamenána v oficiálním registru.</p>
+<p>Žádná změna nesmí být uplatňována zpětně za účelem potrestání jiného bráchy.</p>
+<h3 class="article">Článek 84 — Závěrečné ústavní prohlášení</h3>
+<p>Bro Code představuje nejvyšší soubor pravidel bratrstva.</p>
+<p>Každý člen se zavazuje respektovat jeho základní principy.</p>
+<p>Neznalost článku nezbavuje bráchu odpovědnosti za jeho jednání.</p>
+<p>Bratrství však musí vždy stát na vzájemné důvěře, nikoli na strachu z trestu.</p>
+<h2 class="book">KNIHA XVII — DIGITÁLNÍ BRATRSTVÍ</h2>
+<h3 class="article">Článek 85 — Nezodpovězený telefonát</h3>
+<p>Brácha by neměl bezdůvodně ignorovat telefonát od jiného bráchy.</p>
+<p>Opakované telefonáty mohou signalizovat naléhavou situaci.</p>
+<p>Pokud brácha nemůže hovor přijmout, měl by se ozvat později.</p>
+<p>Telefonát označený jako nouzový má přednost před běžnou komunikací.</p>
+<h3 class="article">Článek 86 — Pravidlo dvojité zprávy</h3>
+<p>Žádný brácha nesmí zesměšňovat jiného bráchu za to, že odešle více zpráv za sebou.</p>
+<p>Dvojitá zpráva není automaticky projevem zoufalství.</p>
+<p>Opakované zprávy nesmějí být používány k obtěžování druhé osoby.</p>
+<p>Brácha má právo neodpovědět okamžitě.</p>
+<h3 class="article">Článek 87 — Zrada prostřednictvím screenshotu</h3>
+<p>Soukromá komunikace mezi bráchy musí být považována za důvěrnou.</p>
+<p>Screenshot soukromé konverzace nesmí být bez souhlasu zveřejněn.</p>
+<p>Zveřejnění za účelem zesměšnění je považováno za závažné porušení důvěry.</p>
+<p>Výjimku představuje situace, kdy je nutné doložit ohrožení, obtěžování nebo jinou závažnou skutečnost a vyhledat pomoc.</p>
+<h3 class="article">Článek 88 — Mlčení ve skupinovém chatu</h3>
+<p>Každý brácha má právo být součástí skupinového chatu.</p>
+<p>Žádný brácha nesmí být úmyslně ignorován při důležitých společných rozhodnutích.</p>
+<p>Mlčení jednoho člena nesmí být automaticky považováno za souhlas.</p>
+<p>Důležité informace musí být předány všem dotčeným členům.</p>
+<h3 class="article">Článek 89 — Digitální Wingman</h3>
+<p>Digitální Wingman může pomáhat bráchovi s formulací zpráv a společenskou komunikací.</p>
+<p>Nesmí však bez jeho souhlasu komunikovat jeho jménem.</p>
+<p>Soukromé konverzace nesmějí být využívány k manipulaci.</p>
+<p>Každý brácha zůstává odpovědný za zprávy, které odešle.</p>
+<h3 class="article">Článek 90 — Online přítomnost</h3>
+<p>Brácha nesmí hodnotit loajalitu jiného bráchy pouze podle jeho aktivity na sociálních sítích.</p>
+<p>Neodpovězení na zprávu neznamená automaticky ignorování.</p>
+<p>Žádný brácha nesmí používat sociální sítě k veřejnému ponižování jiného člena.</p>
+<p>Digitální život nesmí nahrazovat skutečné bratrství.</p>
+<h2 class="book">KNIHA XVIII — STUPNĚ ZRADY A OBNOVA DŮVĚRY</h2>
+<h3 class="article">Článek 91 — Stupně zrady</h3>
+<p>Přestupky proti bratrství se rozdělují do čtyř základních kategorií:</p>
+<p>I. stupeň — drobné porušení tradic.</p>
+<p>II. stupeň — nedbalost a opakovaná nespolehlivost.</p>
+<p>III. stupeň — vědomé porušení důvěry.</p>
+<p>IV. stupeň — závažná a úmyslná zrada bratrství.</p>
+<p>Každý stupeň musí být posuzován podle okolností.</p>
+<p>Rada může přiřadit přestupku vyšší stupeň, pokud způsobené následky odůvodňují přísnější posouzení.</p>
+<h3 class="article">Článek 92 — Právo na druhou šanci</h3>
+<p>Každý brácha má právo požádat o druhou šanci.</p>
+<p>Druhá šance může být udělena pouze tehdy, pokud provinilý brácha uzná své jednání.</p>
+<p>Opakované porušování stejného pravidla může vést k zamítnutí další žádosti.</p>
+<p>Odpuštění nesmí být vynucováno.</p>
+<h3 class="article">Článek 93 — Falešná omluva</h3>
+<p>Omluva učiněná pouze za účelem vyhnutí se následkům není považována za skutečnou omluvu.</p>
+<p>Brácha musí být připraven převzít odpovědnost za své jednání.</p>
+<p>Opakované falešné omluvy mohou být považovány za samostatný přestupek.</p>
+<p>O upřímnosti omluvy rozhoduje především následné chování.</p>
+<h3 class="article">Článek 94 — Návrat ztraceného bráchy</h3>
+<p>Brácha, který byl dříve vyloučen nebo se vzdálil od bratrstva, může požádat o návrat.</p>
+<p>Jeho žádost musí být projednána Radou.</p>
+<p>Předchozí provinění musí být zohledněna, nikoli však automaticky považována za nepřekonatelnou překážku.</p>
+<p>Návrat vyžaduje obnovení důvěry mezi zúčastněnými členy.</p>
+<h3 class="article">Článek 95 — Trvalá zášť</h3>
+<p>Brácha má právo nezapomenout na závažné porušení důvěry.</p>
+<p>Odpuštění a obnovení vztahu jsou dvě odlišné věci.</p>
+<p>Žádný brácha nesmí nutit jiného člena k obnovení přátelství.</p>
+<p>Staré spory však nesmějí být bezdůvodně používány k vyvolávání nových konfliktů.</p>
+<h2 class="book">KNIHA XIX — KLASIFIKACE TAJNÝCH INFORMACÍ</h2>
+<h3 class="article">Článek 96 — Třída I: Veřejné informace</h3>
+<p>Informace první třídy mohou být sdíleny se všemi členy bratrstva.</p>
+<p>Mezi tyto informace patří běžné plány, společné události a veřejné vzpomínky.</p>
+<p>Jejich sdílení nevyžaduje zvláštní souhlas.</p>
+<h3 class="article">Článek 97 — Třída II: Bratrské informace</h3>
+<p>Informace druhé třídy jsou určeny pouze členům bratrstva.</p>
+<p>Nesmějí být předávány osobám mimo skupinu bez souhlasu.</p>
+<p>Jejich zveřejnění může být považováno za porušení důvěry.</p>
+<h3 class="article">Článek 98 — Třída III: Důvěrné informace</h3>
+<p>Informace třetí třídy mohou být sdíleny pouze s konkrétními bráchy, kterým byly určeny.</p>
+<p>Jejich obsah nesmí být diskutován před ostatními členy bez svolení.</p>
+<p>Zveřejnění těchto informací je závažným přestupkem.</p>
+<h3 class="article">Článek 99 — Třída IV: Nejvyšší tajemství</h3>
+<p>Informace čtvrté třídy podléhají nejvyššímu stupni důvěrnosti.</p>
+<p>Přístup k nim má pouze osoba, které byly výslovně svěřeny.</p>
+<p>Žádný brácha nesmí tyto informace zveřejnit kvůli vlastnímu prospěchu.</p>
+<p>Výjimkou zůstává nutnost zajistit bezpečnost nebo pomoc.</p>
+<h3 class="article">Článek 100 — Porušení klasifikace</h3>
+<p>Neoprávněné sdílení důvěrných informací představuje porušení Bro Code.</p>
+<p>Závažnost přestupku závisí na stupni utajení a způsobených následcích.</p>
+<p>Rada může nařídit přiměřené disciplinární opatření.</p>
+<p>Provinilý brácha musí podniknout kroky k omezení dalších škod.</p>
+<h2 class="book">KNIHA XX — SOUTĚŽENÍ A BRATRSKÁ ČEST</h2>
+<h3 class="article">Článek 101 — Přátelské soupeření</h3>
+<p>Přátelské soupeření mezi bráchy je povoleno a podporováno.</p>
+<p>Soutěž musí být založena na vzájemném respektu.</p>
+<p>Výsledek soutěže nesmí narušit dlouhodobé bratrství.</p>
+<p>Každý účastník musí respektovat předem stanovená pravidla.</p>
+<h3 class="article">Článek 102 — Právo na odvetu</h3>
+<p>Poražený brácha má právo požádat o odvetu.</p>
+<p>Odveta musí proběhnout za stejných nebo předem dohodnutých podmínek.</p>
+<p>Vítěz původní soutěže může odveta odmítnout.</p>
+<p>Opakované žádosti nesmějí být používány k obtěžování vítěze.</p>
+<h3 class="article">Článek 103 — Falešné vítězství</h3>
+<p>Žádný brácha nesmí prohlašovat vítězství, kterého nedosáhl.</p>
+<p>Úmyslné falšování výsledků je považováno za podvod.</p>
+<p>Pokud dojde ke sporu o výsledek, rozhoduje předem dohodnutý rozhodčí.</p>
+<p>Podvodem získané vítězství nemá žádnou platnost.</p>
+<h3 class="article">Článek 104 — Legendární výzva</h3>
+<p>Brácha může vyhlásit mimořádnou výzvu ostatním členům.</p>
+<p>Výzva musí být bezpečná a dobrovolná.</p>
+<p>Každý účastník musí znát pravidla před zahájením.</p>
+<p>Vítěz může získat čestný titul nebo symbolické ocenění.</p>
+<h3 class="article">Článek 105 — Pokora vítěze</h3>
+<p>Vítězný brácha má právo oslavit svůj úspěch.</p>
+<p>Vítěz nesmí poražené ponižovat.</p>
+<p>Skutečně legendární vítězství se pozná také podle toho, jak vítěz zachází s poraženými.</p>
+<p>Bratrství má přednost před výsledkem jakékoli soutěže.</p>
+<h2 class="book">KNIHA XXI — OCENĚNÍ A BRATRSKÁ HISTORIE</h2>
+<h3 class="article">Článek 106 — Bratrský přípitek</h3>
+<p>Při významných událostech může být pronesen slavnostní přípitek na počest bratrství.</p>
+<p>Přípitek nemusí zahrnovat alkoholický nápoj.</p>
+<p>Každý brácha má právo odmítnout účast na přípitku.</p>
+<p>Přípitek má symbolizovat jednotu, nikoli povinnost.</p>
+<h3 class="article">Článek 107 — Bratrská ocenění</h3>
+<p>Rada může udělovat ocenění za mimořádné projevy loajality.</p>
+<p>Mezi možné tituly patří:</p>
+<p>Brácha roku.</p>
+<p>Nejlepší Wingman.</p>
+<p>Největší legenda.</p>
+<p>Nejvěrnější brácha.</p>
+<p>Strážce Bro Code.</p>
+<p>Ocenění musí být udělována spravedlivě.</p>
+<p>Žádný brácha nesmí požadovat ocenění pouze na základě svého postavení.</p>
+<h3 class="article">Článek 108 — Oficiální oznámení</h3>
+<p>Důležitá rozhodnutí Rady musí být oznámena všem dotčeným členům.</p>
+<p>Oznámení musí obsahovat jasné informace o přijatém rozhodnutí.</p>
+<p>Žádný brácha nesmí úmyslně překrucovat oficiální oznámení.</p>
+<p>Oznámení může být zaznamenáno do archivu bratrstva.</p>
+<h3 class="article">Článek 109 — Historický záznam</h3>
+<p>Významné události bratrstva musí být uchovávány v jeho historickém archivu.</p>
+<p>Archiv může obsahovat fotografie, příběhy, ocenění a důležitá rozhodnutí.</p>
+<p>Žádný brácha nesmí úmyslně falšovat historii bratrstva.</p>
+<p>Každý člen může navrhnout doplnění významné události do archivu.</p>
+<h2 class="book">KNIHA XXII — NEJVYŠŠÍ HŘÍCHY BRATRSTVA</h2>
+<h3 class="article">Článek 110 — Sedm smrtelných hříchů bráchy</h3>
+<p>Každý brácha se musí vyvarovat následujících sedmi hříchů:</p>
+<p>Zrada — vědomé poškození jiného bráchy.</p>
+<p>Závist — úmyslné znevažování úspěchu jiného člena.</p>
+<p>Pýcha — přesvědčení, že jeden brácha stojí nad všemi ostatními.</p>
+<p>Lenost — opakované ignorování oprávněných povinností vůči bratrstvu.</p>
+<p>Chamtivost — využívání ostatních pro vlastní finanční nebo osobní prospěch.</p>
+<p>Pomstychtivost — úmyslné vyvolávání konfliktů.</p>
+<p>Pokrytectví — požadování pravidel od ostatních, která sám nedodržuje.</p>
+<p>Každý z těchto hříchů může být projednán Radou.</p>
+<p>Opakované páchání těchto hříchů může vést ke ztrátě důvěry.</p>
+<h3 class="article">Článek 111 — Neoprávněné opuštění bráchy</h3>
+<p>Žádný brácha nesmí bezdůvodně opustit jiného bráchu v okamžiku, kdy potřebuje pomoc.</p>
+<p>Toto pravidlo platí zejména v nebezpečných nebo mimořádně obtížných situacích.</p>
+<p>Brácha, který nemůže pomoci osobně, musí alespoň zvážit zajištění jiné pomoci.</p>
+<p>Oprávněné osobní důvody k odchodu musí být respektovány.</p>
+<h3 class="article">Článek 112 — Nejvyšší zrada</h3>
+<p>Nejvyšší zrada představuje úmyslné a závažné poškození bratrství.</p>
+<p>Za nejvyšší zradu může být považována kombinace několika závažných porušení Bro Code.</p>
+<p>O vině musí rozhodnout Rada na základě dostupných skutečností.</p>
+<p>Nejvyšší zrada může vést k trvalému odebrání členství.</p>
+<h3 class="article">Článek 113 — Bratrství nade vše</h3>
+<p>Bratrství představuje jeden z nejdůležitějších závazků každého člena.</p>
+<p>Žádný brácha nesmí zapomenout na základní zásady loajality a respektu.</p>
+<p>Skutečné bratrství se neprokazuje slovy, nýbrž činy.</p>
+<p>Všechny články tohoto zákoníku musí být vykládány v souladu s tímto ustanovením.</p>
+<h3 class="article">Článek 114 — Veřejná loajalita</h3>
+<p>Brácha musí zachovat loajalitu vůči ostatním členům i v přítomnosti cizích osob.</p>
+<p>Žádný brácha nesmí zapírat své přátelství pouze proto, aby si zlepšil společenské postavení.</p>
+<p>Soukromé neshody nesmějí být bezdůvodně vytahovány na veřejnosti.</p>
+<p>Veřejná loajalita však nikdy neznamená povinnost podporovat nesprávné nebo škodlivé jednání.</p>
+<h3 class="article">Článek 115 — Pravidlo představování</h3>
+<p>Pokud se brácha setká s novou osobou ve společnosti jiného bráchy, měl by jej řádně představit.</p>
+<p>Žádný brácha nesmí úmyslně vynechat jiného člena z představování, aby jej ponížil.</p>
+<p>Při představování lze uvést přezdívku, titul nebo legendární přezdívku, pokud s ní dotyčný souhlasí.</p>
+<p>Brácha nesmí prozrazovat osobní informace, které mu byly svěřeny v důvěře.</p>
+<h3 class="article">Článek 116 — Zákaz veřejného ztrapnění</h3>
+<p>Žádný brácha nesmí úmyslně vystavit jiného bráchu veřejnému ponížení.</p>
+<p>Nevinné škádlení je povoleno, pokud je oboustranně přijatelné.</p>
+<p>Citlivé informace, trapné fotografie a soukromé příběhy nesmějí být zveřejňovány bez souhlasu.</p>
+<p>Pokud brácha překročí hranici, musí být připraven se omluvit.</p>
+<h3 class="article">Článek 117 — Veřejný spor</h3>
+<p>Bratrské spory mají být řešeny v soukromí.</p>
+<p>Žádný brácha nesmí využívat veřejnost jako prostředek k získání podpory proti jinému členovi.</p>
+<p>Pokud spor vznikne před ostatními lidmi, mají zúčastnění zachovat důstojnost.</p>
+<p>Brácha nesmí být nucen veřejně přiznat něco, co není pravda.</p>
+<h3 class="article">Článek 118 — Ochrana dobrého jména</h3>
+<p>Každý brácha má právo na ochranu své pověsti.</p>
+<p>Ostatní členové nesmějí šířit nepravdivé informace o jeho osobě.</p>
+<p>Chyby jednoho bráchy nesmějí být bezdůvodně používány k poškození jeho pověsti.</p>
+<p>Každý člen má povinnost napravit škodu, kterou svými nepravdivými tvrzeními způsobil.</p>
+<h2 class="book">KNIHA XXIV — ROMANTICKÉ KONFLIKTY A BRATŘSKÉ HRANICE</h2>
+<h3 class="article">Článek 119 — Právo prvního přiznání</h3>
+<p>Pokud brácha otevřeně přizná zájem o určitou osobu, ostatní členové by měli jeho city respektovat.</p>
+<p>Přiznání zájmu nezakládá vlastnické právo nad druhou osobou.</p>
+<p>Ostatní bráchové nesmějí úmyslně sabotovat jeho snahu.</p>
+<p>Zájem druhé osoby má vždy přednost před jakýmkoli neformálním nárokem.</p>
+<h3 class="article">Článek 120 — Tajné usilování o stejnou osobu</h3>
+<p>Brácha nesmí předstírat nezájem o osobu, o kterou má jeho brácha vážný zájem, pouze proto, aby mohl jednat za jeho zády.</p>
+<p>Pokud se zájmy dvou bráchů překrývají, doporučuje se otevřená komunikace.</p>
+<p>Žádný člen nesmí úmyslně šířit nepravdivé informace, aby získal romantickou výhodu.</p>
+<p>Konečné rozhodnutí vždy náleží osobám, kterých se vztah týká.</p>
+<h3 class="article">Článek 121 — Zamilovanost bráchy</h3>
+<p>Pokud se brácha svěří s tím, že je do někoho zamilovaný, ostatní členové musí jeho důvěru respektovat.</p>
+<p>Tato informace nesmí být bez souhlasu zveřejněna.</p>
+<p>Žádný brácha nesmí využívat jeho citů k manipulaci nebo zesměšňování.</p>
+<p>Wingman má povinnost poskytnout upřímnou radu, nikoli pouze potvrzovat každé rozhodnutí.</p>
+<h3 class="article">Článek 122 — Bývalé rande</h3>
+<p>Osoba, se kterou měl brácha pouze jedno rande, nemusí automaticky spadat pod stejná pravidla jako bývalá partnerka.</p>
+<p>Přesto musí být respektovány jeho pocity a případné dohody.</p>
+<p>Pokud mezi nimi vznikl vážnější vztah, uplatní se přísnější ustanovení o bývalých partnerkách.</p>
+<p>V případě pochybností má přednost otevřená komunikace.</p>
+<h3 class="article">Článek 123 — Dvojitá bratrská zrada</h3>
+<p>Dvojitou zradou se rozumí situace, kdy dva bráchové vědomě spolupracují na poškození třetího bráchy.</p>
+<p>Za zvlášť závažnou se považuje situace, kdy jeden člen zradí důvěru druhého a další člen mu při tom pomáhá.</p>
+<p>Oba účastníci nesou odpovědnost podle míry svého jednání.</p>
+<p>Rada musí každý případ posuzovat samostatně.</p>
+<h3 class="article">Článek 124 — Právo na romantické stažení</h3>
+<p>Brácha má právo kdykoli ukončit své romantické úsilí.</p>
+<p>Ostatní členové jej nesmějí nutit pokračovat.</p>
+<p>Žádný brácha nesmí jeho rozhodnutí zesměšňovat.</p>
+<p>Přijetí neúspěchu je projevem rozumu, nikoli slabosti.</p>
+<h2 class="book">KNIHA XXV — PENÍZE, DLUHY A BRATRSKÉ FINANCE</h2>
+<h3 class="article">Článek 125 — Půjčené peníze</h3>
+<p>Pokud si brácha půjčí peníze od jiného bráchy, má povinnost je vrátit v dohodnutém termínu.</p>
+<p>Výše půjčky musí být oběma stranám jasná.</p>
+<p>Žádný brácha nesmí předstírat, že půjčka byla darem, pokud se na tom obě strany nedohodly.</p>
+<p>Finanční problémy musí být řešeny otevřeně a bez zbytečného ponižování.</p>
+<h3 class="article">Článek 126 — Společný účet</h3>
+<p>Pokud se bráchové dohodnou na společném placení, musí být podmínky předem jasné.</p>
+<p>Každý účastník má přispět dohodnutou částkou.</p>
+<p>Žádný brácha nesmí automaticky předpokládat, že ostatní zaplatí jeho část.</p>
+<p>Pokud někdo nemůže zaplatit, musí to oznámit co nejdříve.</p>
+<h3 class="article">Článek 127 — Zákaz finančního využívání</h3>
+<p>Žádný brácha nesmí opakovaně využívat štědrosti jiného člena.</p>
+<p>Přátelství nesmí být považováno za neomezený zdroj peněz.</p>
+<p>Opakované vyhýbání se placení představuje porušení důvěry.</p>
+<p>Bratrská pomoc však nesmí být zaměňována za povinnost půjčovat peníze.</p>
+<h3 class="article">Článek 128 — Dobrovolné pozvání</h3>
+<p>Brácha, který nabídne zaplacení společného občerstvení nebo jiné drobné výdaje, tak činí dobrovolně.</p>
+<p>Ostatní členové nesmějí jeho nabídku zneužívat.</p>
+<p>Přijetí pozvání neznamená vznik automatického nároku na další pozvání.</p>
+<p>Poděkování je vždy na místě.</p>
+<h3 class="article">Článek 129 — Poslední mince</h3>
+<p>Pokud má brácha pouze omezené finanční prostředky, ostatní členové musí jeho situaci respektovat.</p>
+<p>Nikdo nesmí být nucen utrácet peníze, které potřebuje na důležitější věci.</p>
+<p>Společné plány musí být přizpůsobeny možnostem všech účastníků.</p>
+<p>Skutečné bratrství se neměří množstvím peněz, které člověk utratí.</p>
+<h2 class="book">KNIHA XXVI — OSOBNÍ VĚCI A SPOLEČNÝ PROSTOR</h2>
+<h3 class="article">Článek 130 — Zákaz neoprávněného půjčování</h3>
+<p>Žádný brácha nesmí používat osobní věci jiného bráchy bez jeho souhlasu.</p>
+<p>Předměty vyšší hodnoty vyžadují výslovné svolení.</p>
+<p>Půjčená věc musí být vrácena ve stejném stavu, v jakém byla převzata.</p>
+<p>Pokud dojde k poškození nebo ztrátě, musí být situace napravena.</p>
+<h3 class="article">Článek 131 — Půjčené oblečení</h3>
+<p>Oblečení jiného bráchy lze nosit pouze s jeho svolením.</p>
+<p>Půjčené oblečení musí být vráceno čisté a nepoškozené.</p>
+<p>Žádný brácha nesmí považovat jednorázové zapůjčení za trvalé vlastnictví.</p>
+<p>Zvláštní výjimku může představovat dlouhodobá tradice vzájemného půjčování.</p>
+<h3 class="article">Článek 132 — Osobní elektronika</h3>
+<p>Telefony, počítače, herní konzole a další elektronická zařízení podléhají zvláštní ochraně.</p>
+<p>Žádný brácha nesmí bez svolení procházet soukromé soubory, zprávy nebo účty jiného člena.</p>
+<p>Používání cizího zařízení musí respektovat jeho nastavení a soukromí.</p>
+<p>Přístupové údaje nesmějí být bez souhlasu sdíleny ani ukládány.</p>
+<h3 class="article">Článek 133 — Ztracený majetek</h3>
+<p>Brácha, který nalezne osobní věc jiného člena, musí podniknout přiměřené kroky k jejímu vrácení.</p>
+<p>Nalezená věc nesmí být automaticky považována za dar.</p>
+<p>Úmyslné zatajení nalezeného majetku představuje porušení důvěry.</p>
+<p>Pokud se vlastníka nepodaří zjistit, musí být věc bezpečně uschována.</p>
+<h3 class="article">Článek 134 — Společný prostor</h3>
+<p>Každý brácha musí respektovat prostory, které sdílí s ostatními členy.</p>
+<p>Společné prostory musí být po použití zanechány v přijatelném stavu.</p>
+<p>Nikdo nesmí bez svolení zasahovat do osobních věcí ostatních.</p>
+<p>Host, kterého brácha přivede, je jeho odpovědností v rozsahu běžných pravidel slušného chování.</p>
+<h2 class="book">KNIHA XXVII — NOUZOVÉ SITUACE A BRATRSKÁ POMOC</h2>
+<h3 class="article">Článek 135 — Nouzový telefonát</h3>
+<p>Nouzový telefonát od bráchy musí být považován za prioritní.</p>
+<p>Pokud brácha nemůže odpovědět, měl by se ozvat, jakmile to bude možné.</p>
+<p>V případě skutečného nebezpečí má přednost přivolání odborné pomoci.</p>
+<p>Žádný člen nesmí zesměšňovat bráchu za to, že požádal o pomoc.</p>
+<h3 class="article">Článek 136 — Bezpečný návrat</h3>
+<p>Pokud se bráchové společně účastní události mimo domov, měli by dbát na bezpečný návrat všech členů.</p>
+<p>Nikdo nesmí být úmyslně ponechán bez pomoci v nebezpečné situaci.</p>
+<p>Každý brácha má právo odejít samostatně, pokud je to bezpečné.</p>
+<p>Bezpečnost má vždy přednost před pokračováním společného programu.</p>
+<h3 class="article">Článek 137 — Nečekaná nepřítomnost</h3>
+<p>Pokud brácha bez vysvětlení zmizí ze společné události, ostatní členové by měli ověřit, zda je v pořádku.</p>
+<p>Jeho nepřítomnost nesmí být automaticky považována za zradu nebo neúctu.</p>
+<p>Pokud se jedná o bezpečnostní riziko, musí být přijata přiměřená opatření.</p>
+<p>Každý člen má právo na soukromí a možnost odejít bez podrobného vysvětlování.</p>
+<h3 class="article">Článek 138 — Brácha v nesnázích</h3>
+<p>Brácha, který se ocitne v obtížné situaci, má právo požádat ostatní členy o pomoc.</p>
+<p>Ostatní členové mají podle svých možností nabídnout podporu.</p>
+<p>Pomoc může mít podobu rady, společnosti, praktické pomoci nebo zprostředkování odborné podpory.</p>
+<p>Žádný brácha nesmí být považován za slabého pouze proto, že přizná, že něco nezvládá sám.</p>
+<h3 class="article">Článek 139 — Rovnost všech bráchů</h3>
+<p>Každý brácha má v rámci bratrství stejnou základní hodnotu.</p>
+<p>Bohatství, popularita, vzhled ani společenské postavení nesmějí určovat míru respektu.</p>
+<p>Starší členové mohou mít větší zkušenosti, nikoli však neomezenou autoritu.</p>
+<p>Každý brácha má právo vyjádřit svůj názor.</p>
+<h3 class="article">Článek 140 — Zákaz podmíněné loajality</h3>
+<p>Brácha nesmí projevovat loajalitu pouze tehdy, když z ní má osobní prospěch.</p>
+<p>Přátelství nesmí být založeno na výhodách, které jeden člen získává od druhého.</p>
+<p>Každý člen musí být připraven podpořit ostatní i v méně výhodných situacích.</p>
+<p>Loajalita však nesmí znamenat slepou podporu nesprávného jednání.</p>
+<h3 class="article">Článek 141 — Nedotknutelnost Bro Code</h3>
+<p>Bro Code představuje společný soubor tradic, pravidel a zásad bratrstva.</p>
+<p>Každý brácha má právo navrhovat jeho změny.</p>
+<p>Žádný člen nesmí svévolně měnit již schválená pravidla.</p>
+<p>Zákoník musí být chráněn před zneužitím osobními zájmy jednotlivců.</p>
+<h3 class="article">Článek 142 — Nejvyšší brácha</h3>
+<p>Titul Nejvyššího bráchy může být udělen členovi, který dlouhodobě prokazuje mimořádnou loajalitu.</p>
+<p>Titul není automaticky spojen s právem rozhodovat za ostatní.</p>
+<p>Jeho nositel musí být příkladem ostatním členům.</p>
+<p>Zneužití titulu může vést k jeho odebrání.</p>
+<h3 class="article">Článek 143 — Věčný brácha</h3>
+<p>Některá bratrství mohou přetrvat i přes dlouhá období odloučení.</p>
+<p>Vzdálenost ani nedostatek každodenní komunikace automaticky neruší přátelství.</p>
+<p>Brácha, který se po dlouhé době vrátí, nesmí být automaticky považován za cizince.</p>
+<p>Skutečné bratrství se pozná podle toho, že se jeho členové dokážou znovu spojit.</p>
+<h2 class="book">KNIHA XXIX — LEGENDÁRNÍ SPOLEČENSKÉ ZÁKONY</h2>
+<h3 class="article">Článek 144 — Zákon slavnostního oblečení (Suiting Up)</h3>
+<p>Každá významná společenská událost si zaslouží odpovídající oblečení.</p>
+<p>Brácha, který se rozhodne obléci slavnostně, má právo očekávat podobnou snahu od ostatních účastníků, pokud se na tom společně dohodli.</p>
+<p>Oblečení musí odpovídat příležitosti.</p>
+<p>Skutečný styl není otázkou ceny, ale sebevědomí a vhodnosti.</p>
+<h3 class="article">Článek 145 — Pravidlo Lemon Law</h3>
+<p>Každý brácha má právo během prvních pěti minut setkání s novou osobou rozhodnout, zda chce v konverzaci pokračovat.</p>
+<p>Toto pravidlo je inspirováno principem rychlého společenského rozhodování.</p>
+<p>Nesmí být používáno jako záminka k ponižování nebo diskriminaci.</p>
+<p>Zdvořilé ukončení konverzace má vždy přednost před neuctivým odchodem.</p>
+<h3 class="article">Článek 146 — Pravidlo Hot-Crazy</h3>
+<p>Žádný brácha nesmí posuzovat hodnotu člověka pouze podle vzhledu nebo společenských stereotypů.</p>
+<p>Při výběru partnera musí být důležitá vzájemná kompatibilita, respekt a důvěra.</p>
+<p>Žádný matematický vzorec nemůže nahradit skutečné poznání druhého člověka.</p>
+<p>Tento článek je uveden jako historický odkaz na Barneyho legendární teorii, nikoli jako skutečné pravidlo pro hodnocení lidí.</p>
+<h3 class="article">Článek 147 — Pravidlo nečekaného odhalení</h3>
+<p>Žádný brácha nesmí bez souhlasu zveřejňovat soukromé nebo intimní informace o jiném členovi.</p>
+<p>Soukromí každého člověka musí být respektováno.</p>
+<p>Vtip nebo společenská situace nikdy neospravedlňuje překročení osobních hranic.</p>
+<p>Tento článek má přednost před jakoukoli tradicí založenou na překvapení.</p>
+<h3 class="article">Článek 148 — Kniha legendárních plánů (The Playbook)</h3>
+<p>Každý brácha může vést záznam svých úspěšných společenských nápadů.</p>
+<p>Tyto nápady mohou být sdíleny s ostatními členy.</p>
+<p>Žádný plán nesmí být založen na lhaní, manipulaci nebo nerespektování souhlasu druhých.</p>
+<p>Nejlepší společenský plán je ten, při kterém se všichni zúčastnění dobře baví.</p>
+<h2 class="book">KNIHA XXX — LEGENDÁRNÍ STATUS A BRATRSKÁ SLÁVA</h2>
+<h3 class="article">Článek 149 — Legendární status</h3>
+<p>Legendární status je čestné označení udělované bráchovi za mimořádný čin.</p>
+<p>Status nelze získat pouhým prohlášením.</p>
+<p>Musí být potvrzen dlouhodobým chováním nebo výjimečnou událostí.</p>
+<p>Legendární status nezbavuje jeho nositele povinnosti dodržovat Bro Code.</p>
+<h3 class="article">Článek 150 — Legendární příchod</h3>
+<p>Významný příchod bráchy na společenskou událost může být zaznamenán jako legendární okamžik.</p>
+<p>Příchod musí být přiměřený situaci.</p>
+<p>Žádný brácha nesmí kvůli efektnímu příchodu ohrozit sebe ani ostatní.</p>
+<p>Nejlepší příchod je ten, na který se dlouho vzpomíná.</p>
+<h3 class="article">Článek 151 — Legendární příběh</h3>
+<p>Každé bratrstvo může uchovávat příběhy o svých nejvýznamnějších událostech.</p>
+<p>Příběh musí být vyprávěn s respektem k osobám, kterých se týká.</p>
+<p>Drobné úpravy pro komediální účely jsou povoleny, pokud nezpůsobují skutečnou újmu.</p>
+<p>Žádný brácha nesmí úmyslně vydávat smyšlený příběh za historickou skutečnost.</p>
+<h3 class="article">Článek 152 — Pravidlo zpětného odkazu (Callback)</h3>
+<p>Pokud se během společenské události objeví odkaz na starší společný zážitek, ostatní bráchové mohou tento odkaz náležitě ocenit.</p>
+<p>Opakované vtipy a hlášky tvoří součást společné historie.</p>
+<p>Callback musí být srozumitelný alespoň části přítomného bratrstva.</p>
+<p>Žádný brácha nesmí být úmyslně vylučován z konverzace pomocí interních vtipů.</p>
+<h3 class="article">Článek 153 — Síň slávy</h3>
+<p>Každé bratrstvo může zřídit vlastní Síň slávy.</p>
+<p>Do Síně slávy mohou být zařazeni členové, kteří mimořádně přispěli k jeho historii.</p>
+<p>Záznam musí obsahovat důvod udělení ocenění.</p>
+<p>Členství v Síni slávy je čestné a nesmí být považováno za nadřazenost nad ostatními.</p>
+<h2 class="book">KNIHA XXXI — SOUTĚŽE, VÝZVY A SPOLEČNÉ VÍTĚZSTVÍ</h2>
+<h3 class="article">Článek 154 — Bratrská soutěž</h3>
+<p>Každý brácha může vyzvat jiného člena k přátelské soutěži.</p>
+<p>Soutěž musí mít předem stanovená pravidla.</p>
+<p>Účast je dobrovolná.</p>
+<p>Výsledek musí být respektován všemi účastníky.</p>
+<h3 class="article">Článek 155 — Právo na výzvu</h3>
+<p>Brácha, který prohraje, může požádat o další soutěž.</p>
+<p>Výzva musí být přijata dobrovolně.</p>
+<p>Žádný člen nesmí být zesměšňován za odmítnutí.</p>
+<p>Opakovaná vítězství nezakládají právo na povyšování nad ostatní.</p>
+<h3 class="article">Článek 156 — Druhá odveta</h3>
+<p>Pokud se první odveta skončí nerozhodně, mohou se účastníci dohodnout na třetím pokusu.</p>
+<p>Třetí pokus může být označen jako rozhodující.</p>
+<p>Pravidla musí zůstat spravedlivá.</p>
+<p>Pokud se účastníci nedohodnou, může být výsledek ponechán jako nerozhodný.</p>
+<h3 class="article">Článek 157 — Pokora poraženého i vítěze</h3>
+<p>Poražený brácha musí přijmout výsledek s důstojností.</p>
+<p>Vítězný brácha musí zachovat respekt.</p>
+<p>Žádný člen nesmí používat výsledek soutěže jako důvod k dlouhodobému ponižování.</p>
+<p>Přátelství má vždy vyšší hodnotu než vítězství.</p>
+<h3 class="article">Článek 158 — Posvátná hra</h3>
+<p>Každá hra, kterou bratrstvo dlouhodobě považuje za svou tradici, může být označena za posvátnou.</p>
+<p>Pravidla takové hry musí být respektována.</p>
+<p>Úmyslné podvádění je zakázáno.</p>
+<p>Hra musí zůstat zdrojem zábavy a společného zážitku.</p>
+<h2 class="book">KNIHA XXXII — VZTAHY, ROZCHODY A NOVÉ ZAČÁTKY</h2>
+<h3 class="article">Článek 159 — Pravidlo romantického neúspěchu</h3>
+<p>Brácha, který zažije neúspěch v romantické oblasti, má právo na podporu ostatních členů.</p>
+<p>Žádný brácha nesmí jeho neúspěch využívat jako prostředek k zesměšňování.</p>
+<p>Rada a podpora mají přednost před nevyžádaným kritizováním.</p>
+<p>Každý člen má právo rozhodnout, kdy je připraven o situaci mluvit.</p>
+<h3 class="article">Článek 160 — Právo jít dál</h3>
+<p>Po skončení vztahu má každý brácha právo začít novou životní kapitolu.</p>
+<p>Ostatní členové nesmějí úmyslně bránit jeho posunu dál.</p>
+<p>Minulé vztahy nesmějí být používány k trvalému omezování osobní svobody.</p>
+<p>Vzájemný respekt musí být zachován i po rozchodu.</p>
+<h3 class="article">Článek 161 — Zákaz využívání náhradního vztahu</h3>
+<p>Žádný brácha nesmí vstupovat do vztahu pouze za účelem vyvolání žárlivosti u jiné osoby.</p>
+<p>Druhá osoba nesmí být používána jako prostředek k pomstě.</p>
+<p>Pokud brácha není připraven na nový vztah, měl by jednat upřímně.</p>
+<p>Upřímnost má přednost před společenskými hrami.</p>
+<h3 class="article">Článek 162 — Pravidlo upřímného přiznání</h3>
+<p>Pokud brácha zjistí, že jeho jednání může ovlivnit vztah mezi dvěma členy, měl by o tom otevřeně informovat dotčené osoby.</p>
+<p>Zatajování důležitých skutečností může být považováno za porušení důvěry.</p>
+<p>Přiznání musí být učiněno bez zbytečného odkladu.</p>
+<p>Ostatní členové musí umožnit spravedlivé vysvětlení situace.</p>
+<h3 class="article">Článek 163 — Hranice po rozchodu</h3>
+<p>Po rozchodu musí být respektovány osobní hranice obou bývalých partnerů.</p>
+<p>Brácha nesmí být nucen zprostředkovávat kontakt mezi bývalými partnery.</p>
+<p>Soukromé informace z minulého vztahu nesmějí být používány jako zbraň.</p>
+<p>Každý člen má právo rozhodnout, zda chce s bývalým partnerem zůstat v kontaktu.</p>
+<h2 class="book">KNIHA XXXIII — VĚČNÉ BRATRSTVÍ A ZÁVĚREČNÁ USTANOVENÍ</h2>
+<h3 class="article">Článek 164 — Bratrství na dálku</h3>
+<p>Vzdálenost mezi bráchy neruší jejich vzájemné pouto.</p>
+<p>Nedostatek osobních setkání nesmí být automaticky považován za nezájem.</p>
+<p>Bráchové by měli podle svých možností udržovat kontakt.</p>
+<p>Každé opětovné setkání může být považováno za obnovení společné tradice.</p>
+<h3 class="article">Článek 165 — Tichá podpora</h3>
+<p>Ne každá pomoc musí být vyjádřena slovy.</p>
+<p>Brácha může projevit podporu pouhou přítomností.</p>
+<p>Žádný člen nesmí vyžadovat vysvětlení, pokud druhý potřebuje chvíli klidu.</p>
+<p>Tichá podpora je stejně hodnotná jako veřejné vyjádření loajality.</p>
+<h3 class="article">Článek 166 — Právo na změnu</h3>
+<p>Každý brácha má právo měnit své názory, zájmy a životní cíle.</p>
+<p>Ostatní členové musí respektovat jeho osobní vývoj.</p>
+<p>Minulé chování nesmí být automaticky považováno za závazek do budoucnosti.</p>
+<p>Skutečné bratrství umožňuje růst bez nutnosti opustit vlastní identitu.</p>
+<h3 class="article">Článek 167 — Bezpodmínečný respekt</h3>
+<p>Každý brácha má právo na základní respekt bez ohledu na své úspěchy či neúspěchy.</p>
+<p>Osobní problémy nesmějí být důvodem k ponižování.</p>
+<p>Vzájemná úcta musí být zachována i během konfliktů.</p>
+<p>Žádný člen nesmí být nucen dokazovat svou hodnotu prostřednictvím nebezpečných nebo ponižujících výzev.</p>
+<h3 class="article">Článek 168 — Nouzové bratrství</h3>
+<p>V případě vážné nouze se všechny běžné společenské spory odkládají.</p>
+<p>Bráchové mají podle svých možností spolupracovat na zajištění bezpečnosti a pomoci.</p>
+<p>Žádný předchozí konflikt nesmí být důvodem k odmítnutí přiměřené pomoci.</p>
+<p>Po skončení nouzové situace mohou být původní spory znovu projednány.</p>
+<h3 class="article">Článek 169 — Výjimka založená na souhlasu</h3>
+<p>Každý člověk má právo svobodně rozhodovat o svých vztazích a osobních hranicích.</p>
+<p>Žádné ustanovení Bro Code nesmí být vykládáno jako oprávnění rozhodovat za jinou osobu.</p>
+<p>Souhlas musí být dobrovolný a může být kdykoli odvolán.</p>
+<p>Vzájemný respekt má přednost před jakoukoli tradicí, výzvou nebo neformálním nárokem.</p>
+<h3 class="article">Článek 170 — Nejvyšší výklad zákoníku</h3>
+<p>Bro Code byl vytvořen za účelem posílení přátelství, loajality a vzájemného respektu.</p>
+<p>Žádný článek nesmí být používán k ospravedlnění ubližování, manipulace nebo nerespektování osobních hranic.</p>
+<p>Pokud se dva články dostanou do rozporu, přednost má ten, který lépe chrání základní principy bratrství.</p>
+<p>Každý brácha je odpovědný nejen za znalost pravidel, ale také za jejich smysluplné dodržování.</p>
+<p>Bro Code není pouhý seznam zákazů a povinností. Je závazkem, že brácha nikdy nebude považovat druhého bráchu za někoho, koho lze jednoduše odhodit, když se objeví něco výhodnějšího.</p>
+<p>KONEC BRO CODE</p>
+<p>170 ČLÁNKŮ</p>
+<p>XXXIII KNIH • JEDEN ZÁKONÍK • JEDNO BRATRSTVÍ</p>
+<p>„Bráchové před holkama.“</p>
+</main>
+<footer>
+  <p><strong>THE BRO CODEX</strong></p>
+  <p>Bráchové před holkama. Jedno bratrství, jeden zákoník.</p>
+  <p><a href="index.html">Zpět na hlavní stránku</a></p>
+  <p>Fanouškovský projekt inspirovaný seriálem How I Met Your Mother.</p>
+</footer>
+<a class="top" href="#top" aria-label="Zpět nahoru">↑</a>
+</body>
+</html>
